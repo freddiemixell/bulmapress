@@ -1,0 +1,15 @@
+{
+    "name": "paperplaneco/paperpress",
+    "description": "Boilerplate Theme from Paper Plane Website Co.",
+    "type": "wordpress-theme",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "freddiemixell",
+            "email": "fmixell@gmail.com"
+        }
+    ],
+    "require": {
+        "wpackio/enqueue": "^2.1"
+    }
+}

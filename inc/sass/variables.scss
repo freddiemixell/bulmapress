@@ -1,0 +1,39 @@
+/* These variables are used througout style.scss. */
+
+// Color Palette
+$white: #f5f5f5;
+$black: #333;
+$theme-color-one: var(--primary);
+$theme-color-two: var(--secondary);
+$theme-color-three: var(--color-three);
+$theme-color-four: var(--color-four);
+$theme-color-five: var(--color-five);
+
+$navbar-background-color: $theme-color-one;
+$body-background-color: $theme-color-one;
+
+// Update Bulma's global variables
+$family-sans-serif: "PlatformWeb", sans-serif;
+$family-mono: 'Roboto Mono';
+$family-primary: $family-mono;
+$widescreen-enabled: true;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+// Buttons
+$button-background-color: $theme-color-one;
+$button-color: $white;
+$button-border-color: transparent;
+$button-family: 'PlatformWeb';
+
+// Title
+$title-size: 52px;
+$title-weight: 500;
+$title-line-height: 72px;
+$subtitle-family: 'Roboto Mono', sans-serif;
+$subtitle-size: 16px;
+

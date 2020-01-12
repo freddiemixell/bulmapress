@@ -1,0 +1,83 @@
+/*
+Theme Name: Paper Press
+Theme URI: https://paperplaneco.com/themes/paper-press-wordpress-theme/
+Author: Paper Press
+Author URI: https://paperplaneco.com/
+Description: A beautifully-simple yet powerful WordPress theme that integrates perfectly with the new Gutenberg editor and the Paper Press plugin. Start building amazing websites with the new WordPress editor today! Paper Press comes with theme options to customize your font style, body and title font sizes, content width and more! Install the Paper Press plugin (paperplaneco.com) to add even more page-building blocks such as testimonials, sharing icons, notices, call to actions, buttons and more. Theme Demo: https://paperplaneco.com/demo
+Version: 1.2.6
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: paper-press
+Domain Path: /languages/
+Tags: one-column, featured-images, theme-options, custom-background, custom-colors, custom-menu, editor-style, translation-ready, footer-widgets, full-width-template, blog
+
+(C) 2018 Array, Inc.
+*/
+
+/* Import Paper Press Sass Variables (inc/sass/variables.scss) */
+@charset "utf-8";
+
+@font-face {
+	font-family: 'PlatformWeb';
+	font-style: normal;
+	font-weight: 500;
+	src: url(/wp-content/themes/paper-press/inc/fonts/PlatformWeb-Medium.eot);
+	src: url(/wp-content/themes/paper-press/inc/fonts/PlatformWeb-Medium.eot?#iefix) format("embedded-opentype"),url(/wp-content/themes/paper-press/inc/fonts/PlatformWeb-Medium.woff) format("woff"),url(../fonts/PlatformWeb-Medium.ttf) format("truetype"),url(/wp-content/themes/paper-press/inc/fonts/PlatformWeb-Medium.svg#PlatformWeb) format("svg")
+}
+.editor-styles-wrapper {
+	font-family: "PlatformWeb" !important;
+	body {
+		font-family: "PlatformWeb" !important;
+	}
+}
+
+:root { --primary: #57c9fc; --secondary: #54F2A2; --text: #333; --color-three: #55f2a2; --color-four: #5598f2; --color-five: #5de0e6 }
+
+@import 'variables';
+
+// Import only what you need from Bulma
+@import "../../node_modules/bulma/sass/utilities/_all.sass";
+@import "../../node_modules/bulma/sass/base/_all.sass";
+@import "../../node_modules/bulma/sass/elements/button.sass";
+@import "../../node_modules/bulma/sass/elements/container.sass";
+@import "../../node_modules/bulma/sass/grid/columns.sass";
+@import "../../node_modules/bulma/sass/elements/title.sass";
+@import "../../node_modules/bulma/sass/form/_all.sass";
+@import "../../node_modules/bulma/sass/components/navbar.sass";
+@import "../../node_modules/bulma/sass/layout/hero.sass";
+@import "../../node_modules/bulma/sass/layout/section.sass";
+
+
+.navbar .navbar-brand img {
+    max-height: 65px;
+}
+
+.navbar-item {
+	font-family: $family-sans-serif;
+}
+
+.site-header {
+	background-color: var(--primary);
+}
+
+.button.is-primary {
+	background-color: var(--secondary);
+}
+
+.hero {
+	background-color: $theme-color-one;
+	.title {
+		font-size: 70px;
+		line-height: 82px;
+		font-family: "PlatformWeb";
+		color: $black;
+	}
+}
+
+.accent-text {
+	color: $theme-color-three;
+}
+
+.admin-bar .is-fixed-top {
+	top: 32px;
+}

@@ -1,0 +1,37 @@
+{
+  "hero.js": "theme/hero.js",
+  "main.css": "theme/main.css",
+  "main.js": "theme/main.js",
+  "mobile.js": "theme/mobile.js",
+  "runtime.js": "theme/runtime.js",
+  "theme/assets/PlatformWeb-Medium.ttf": "theme/assets/PlatformWeb-Medium-5abdb50e.ttf",
+  "vendors~hero~main~mobile.js": "theme/vendors~hero~main~mobile.js",
+  "vendors~main.js": "theme/vendors~main.js",
+  "wpackioEp": {
+    "main": {
+      "js": [
+        "theme/runtime.js",
+        "theme/vendors~hero~main~mobile.js",
+        "theme/vendors~main.js",
+        "theme/main.js"
+      ],
+      "css": [
+        "theme/main.css"
+      ]
+    },
+    "mobile": {
+      "js": [
+        "theme/runtime.js",
+        "theme/vendors~hero~main~mobile.js",
+        "theme/mobile.js"
+      ]
+    },
+    "hero": {
+      "js": [
+        "theme/runtime.js",
+        "theme/vendors~hero~main~mobile.js",
+        "theme/hero.js"
+      ]
+    }
+  }
+}
