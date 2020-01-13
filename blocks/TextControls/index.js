@@ -1,0 +1,2 @@
+import './TextColor';
+import './RemoveFormat';
