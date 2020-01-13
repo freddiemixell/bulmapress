@@ -1,7 +1,8 @@
-const { createElement } = window.wp.element
-const { registerFormatType } = window.wp.richText
-const { InspectorControls } = window.wp.editor
-const { PanelBody, Button } = window.wp.components
+const { createElement } = wp.element
+const { registerFormatType } = wp.richText
+const { InspectorControls } =  wp.blockEditor
+const { PanelBody, Button } = wp.components
+const { __ } = wp.i18n;
 
 const type = 'paperblocks/remove-formatting'
 
@@ -9,20 +10,21 @@ registerFormatType(type, {
   title: 'Remove formatting',
   tagName: 'span',
   className: 'remove',
-  edit ({ isActive, value, onChange }) {
+  edit ({ value, onChange }) {
     return (
-      createElement(InspectorControls, null,
-        createElement(PanelBody, {
-          title: 'Remove Formatting'
-        },
-        createElement(Button, {
-          isDefault: true,
-          onClick: () => onChange({ ...value, formats: Array(value.formats.length) })
-        },
-        'Remove All formatting'
-        )
-        )
-      )
+      <InspectorControls>
+        <PanelBody
+          title={ __( 'Remove Formatting', 'paper-blocks' ) }
+          initialOpen={false}
+        >
+          <Button
+            isDefault={true}
+            onClick={() => onChange({ ...value, formats: Array(value.formats.length) })}
+          >
+            Remove formatting
+          </Button>
+        </PanelBody>
+      </InspectorControls>
     )
   }
 })
