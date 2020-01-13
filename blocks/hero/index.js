@@ -60,6 +60,7 @@ export default registerBlockType(
             }
             return (
                 <section className={ "paperpress-hero paperpress-is-fullheight-with-navbar  " + className }>
+                    <Inspector {...{ setAttributes, ...props }} />
                     <div className="paperpress-hero-body">
                         <div className="paperpress-container">
                             <div className="paperpress-columns">
@@ -79,7 +80,6 @@ export default registerBlockType(
                                             onChange={ onChangeSubtitle }
                                             value={ subtitle }
                                         />
-                                        <Inspector {...{ setAttributes, ...props }} />
                                         <div className="paperpress-buttons">
                                             <button className="paperpress-button paperpress-is-primary">
                                             <span>Get Started</span>
