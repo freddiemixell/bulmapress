@@ -79,8 +79,7 @@ export default registerBlockType(
                                             onChange={ onChangeSubtitle }
                                             value={ subtitle }
                                         />
-                                        {/* <Inspector {...{ setAttributes, ...props }} />
-                                        <Controls {...{ setAttributes, ...props }} /> */}
+                                        <Inspector {...{ setAttributes, ...props }} />
                                         <div className="paperpress-buttons">
                                             <button className="paperpress-button paperpress-is-primary">
                                             <span>Get Started</span>

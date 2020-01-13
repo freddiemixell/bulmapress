@@ -33,15 +33,7 @@ export default class Inspector extends Component {
   render() {
     const {
       attributes: {
-        checkboxControl,
-        colorPaletteControl,
-        colorPaletteControl2,
-        radioControl,
-        rangeControl,
-        textControl,
-        textareaControl,
-        toggleControl,
-        selectControl
+        heroTextMod
       },
       setAttributes
     } = this.props;
@@ -49,116 +41,25 @@ export default class Inspector extends Component {
     return (
       <InspectorControls>
         <PanelBody
-          title={__("Panel Body Title", "jsforwpblocks")}
+          title={__("Hero Controls", "paper-blocks")}
           initialOpen={false}
         >
           <PanelRow>
-            <p>{__("Panel Body Copy", "jsforwpblocks")}</p>
+            <RadioControl
+              label={__("Hero Headline Size", "paper-blocks")}
+              selected={heroTextMod}
+              options={[
+                { label: "Size 1", value: "is-size-1" },
+                { label: "Size 2", value: "is-size-2" },
+                { label: "Size 3", value: "is-size-3" },
+                { label: "Size 4", value: "is-size-4" },
+                { label: "Size 5", value: "is-size-5" },
+                { label: "Size 6", value: "is-size-6" },
+                { label: "Size 7", value: "is-size-7" },
+              ]}
+              onChange={heroTextMod => setAttributes({ heroTextMod })}
+            />
           </PanelRow>
-        </PanelBody>
-
-        <PanelBody>
-          <CheckboxControl
-            heading={__("Checkbox Control", "jsforwpblocks")}
-            label={__("Check here", "jsforwpblocks")}
-            help={__("Checkbox control help text", "jsforwpblocks")}
-            checked={checkboxControl}
-            onChange={checkboxControl => setAttributes({ checkboxControl })}
-          />
-        </PanelBody>
-
-        <PanelColorSettings
-          title={__("Color Settings", "jsforwpblocks")}
-          colorSettings={[
-            {
-              value: colorPaletteControl,
-              onChange: colorPaletteControl => {
-                setAttributes({ colorPaletteControl });
-              },
-              label: __("Background Color")
-            }
-          ]}
-        />
-
-        <PanelBody>
-          <h3>{__("Color Settings 2", "jsforwpblocks")}</h3>
-          <ColorPalette
-            value={colorPaletteControl2}
-            onChange={colorPaletteControl2 => {
-              setAttributes({ colorPaletteControl2 });
-            }}
-          />
-          <ContrastChecker
-            {...{
-              // Text is considered large if font size is greater or equal to 18pt or 24px,
-              // currently that's not the case for button.
-              isLargeText: false,
-              textColor: colorPaletteControl2,
-              backgroundColor: colorPaletteControl
-            }}
-          />
-        </PanelBody>
-        <PanelBody>
-          <RadioControl
-            label={__("Radio Control", "jsforwpblocks")}
-            selected={radioControl}
-            options={[
-              { label: "Author", value: "a" },
-              { label: "Editor", value: "e" }
-            ]}
-            onChange={radioControl => setAttributes({ radioControl })}
-          />
-        </PanelBody>
-
-        <PanelBody>
-          <RangeControl
-            beforeIcon="arrow-left-alt2"
-            afterIcon="arrow-right-alt2"
-            label={__("Range Control", "jsforwpblocks")}
-            value={rangeControl}
-            onChange={rangeControl => setAttributes({ rangeControl })}
-            min={1}
-            max={10}
-          />
-        </PanelBody>
-
-        <PanelBody>
-          <TextControl
-            label={__("Text Control", "jsforwpblocks")}
-            help={__("Text control help text", "jsforwpblocks")}
-            value={textControl}
-            onChange={textControl => setAttributes({ textControl })}
-          />
-        </PanelBody>
-
-        <PanelBody>
-          <TextareaControl
-            label={__("Text Area Control", "jsforwpblocks")}
-            help={__("Text area control help text", "jsforwpblocks")}
-            value={textareaControl}
-            onChange={textareaControl => setAttributes({ textareaControl })}
-          />
-        </PanelBody>
-
-        <PanelBody>
-          <ToggleControl
-            label={__("Toggle Control", "jsforwpblocks")}
-            checked={toggleControl}
-            onChange={toggleControl => setAttributes({ toggleControl })}
-          />
-        </PanelBody>
-
-        <PanelBody>
-          <SelectControl
-            label={__("Select Control", "jsforwpblocks")}
-            value={selectControl}
-            options={[
-              { value: "a", label: __("Option A", "jsforwpblocks") },
-              { value: "b", label: __("Option B", "jsforwpblocks") },
-              { value: "c", label: __("Option C", "jsforwpblocks") }
-            ]}
-            onChange={selectControl => setAttributes({ selectControl })}
-          />
         </PanelBody>
       </InspectorControls>
     );

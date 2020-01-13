@@ -20,10 +20,6 @@ const attributes = {
     dateTimeControl: {
       type: "string"
     },
-    radioControl: {
-      type: "string",
-      default: "a"
-    },
     rangeControl: {
       type: "number",
       default: "10"
@@ -67,6 +63,9 @@ const attributes = {
     },
     buttonTxt: {
         type: 'string'
+    },
+    heroTextMod: {
+      type: 'string',
     }
   };
   
