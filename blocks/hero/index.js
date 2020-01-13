@@ -59,9 +59,9 @@ export default registerBlockType(
                 });
             }
             return (
-                <section class={ "paperpress-hero paperpress-is-fullheight-with-navbar  " + className }>
-                    <div class="paperpress-hero-body">
-                        <div class="paperpress-container">
+                <section className={ "paperpress-hero paperpress-is-fullheight-with-navbar  " + className }>
+                    <div className="paperpress-hero-body">
+                        <div className="paperpress-container">
                             <div className="paperpress-columns">
                                 <div className="paperpress-column">
                                     <div>
@@ -79,13 +79,13 @@ export default registerBlockType(
                                             onChange={ onChangeSubtitle }
                                             value={ subtitle }
                                         />
-                                        <Inspector {...{ setAttributes, ...props }} />
-                                        <Controls {...{ setAttributes, ...props }} />
-                                        <div class="paperpress-buttons">
-                                            <button class="paperpress-button paperpress-is-primary">
+                                        {/* <Inspector {...{ setAttributes, ...props }} />
+                                        <Controls {...{ setAttributes, ...props }} /> */}
+                                        <div className="paperpress-buttons">
+                                            <button className="paperpress-button paperpress-is-primary">
                                             <span>Get Started</span>
-                                                <span class="paperpress-icon">
-                                                <i class="fas fa-arrow-right"></i>
+                                                <span className="paperpress-icon">
+                                                <i className="fas fa-arrow-right"></i>
                                                 </span>
                                             </button>
                                         </div>
@@ -111,7 +111,7 @@ export default registerBlockType(
 
                                     ) : (
 
-                                    <p class="image-wrapper">
+                                    <p className="image-wrapper">
                                         <img
                                             src={ imgURL }
                                             alt={ imgAlt }
@@ -149,9 +149,9 @@ export default registerBlockType(
                                         <h1 className="paperpress-title" dangerouslySetInnerHTML={ {
                                             __html: title,
                                         } }/>
-                                        <p className="paperpress-subtitle">
-                                            { subtitle }
-                                        </p>
+                                        <p className="paperpress-subtitle" dangerouslySetInnerHTML={ { 
+                                            __html: subtitle,
+                                         } }/>
                                         <div className="paperpress-buttons">
                                             <a
                                                 className="paperpress-button paperpress-is-primary"
