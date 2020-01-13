@@ -59,13 +59,15 @@ if ( ! function_exists( 'paperpress_enqueue' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
 
-		// Enqueue files[0] (name = app) - entryPoint main
 		$enqueue->enqueue( 'theme', 'main', [] );
-		// Enqueue files[0] (name = app) - entryPoint mobile
-		$enqueue->enqueue( 'theme', 'mobile', [] );
 		$enqueue->enqueue(
             'theme',
             'hero',
+            [ 'wp-i18n', 'wp-element', 'wp-blocks', 'wp-components', 'wp-editor' ]
+		);
+		$enqueue->enqueue(
+            'theme',
+            'textControls',
             [ 'wp-i18n', 'wp-element', 'wp-blocks', 'wp-components', 'wp-editor' ]
         );
 	}
