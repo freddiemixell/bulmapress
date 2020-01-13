@@ -32,11 +32,11 @@ const { InspectorControls, PanelColorSettings } = wp.blockEditor;
       }
 
       return (
-        createElement(InspectorControls, null,
-          createElement(PanelColorSettings, {
-            title,
-            initialOpen: true,
-            colorSettings: [
+        <InspectorControls>
+          <PanelColorSettings
+            title={title}
+            initialOpen={false}
+            colorSettings={[
               {
                 value: activeColor,
                 onChange: (color) => {
@@ -54,9 +54,9 @@ const { InspectorControls, PanelColorSettings } = wp.blockEditor;
                 },
                 label: 'Apply colour to the selected text.'
               }
-            ]
-          })
-        )
+            ]}
+          />
+        </InspectorControls>
       )
     }
   })
