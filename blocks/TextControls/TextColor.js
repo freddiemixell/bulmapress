@@ -1,6 +1,7 @@
 const { createElement } = wp.element
 const { registerFormatType, applyFormat, removeFormat, getActiveFormat } = wp.richText
 const { InspectorControls, PanelColorSettings } = wp.blockEditor;
+const { __ } = wp.i18n;
 
 [
   {
@@ -52,7 +53,7 @@ const { InspectorControls, PanelColorSettings } = wp.blockEditor;
 
                   onChange(removeFormat(value, type))
                 },
-                label: 'Apply colour to the selected text.'
+                label: 'Apply color to the selected text.'
               }
             ]}
           />
