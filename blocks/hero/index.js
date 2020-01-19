@@ -11,7 +11,7 @@ import Inspector from './Inspector';
  */
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { RichText, MediaUpload } = wp.blockEditor;
+const { RichText, MediaUpload, InnerBlocks } = wp.blockEditor;
 const { Button } = wp.components;
 
 /**
@@ -58,6 +58,10 @@ export default registerBlockType(
                             <div className="paperpress-columns">
                                 <div className="paperpress-column">
                                     <div>
+                                        <InnerBlocks
+                                            allowedBlocks={ [ 'paperblocks/title' ] }
+                                            template={ [[ 'paperblocks/title', { textContent: 'Placeholder' } ]] }
+                                        />
                                         <RichText
                                             tagName="h1"
                                             className={`paperpress-title ${ heroTextMod } ${ heroTextAlign }`}
@@ -137,6 +141,7 @@ export default registerBlockType(
                             <div className="paperpress-columns">
                                 <div className="paperpress-column">
                                     <div>
+                                        <InnerBlocks.Content />
                                         <h1 className={ `paperpress-title ${heroTextMod} ${ heroTextAlign }` } dangerouslySetInnerHTML={ {
                                             __html: title,
                                         } }/>
