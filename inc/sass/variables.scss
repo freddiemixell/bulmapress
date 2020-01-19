@@ -16,7 +16,7 @@ $body-background-color: $theme-color-one;
 $family-sans-serif: "PlatformWeb", sans-serif;
 $family-mono: 'Roboto Mono';
 $family-primary: $family-mono;
-$widescreen-enabled: true;
+$widescreen-enabled: false;
 $fullhd-enabled: false;
 
 // Update some of Bulma's component variables
@@ -36,4 +36,6 @@ $title-weight: 500;
 $title-line-height: 72px;
 $subtitle-family: 'Roboto Mono', sans-serif;
 $subtitle-size: 16px;
+
+$size-1: 4rem;
 
