@@ -24,24 +24,17 @@ export default registerBlockType(
         title: __( 'Paper Hero', 'paper-blocks' ),
         description: __( 'Add a hero section to your page.', 'paper-blocks' ),
         category: 'common',
-        icon: 'dashicons-welcome-write-blog',   
+        icon: 'welcome-write-blog',   
         keywords: [
             __( 'Hero', 'paper-blocks' ),
             __( 'Bulma', 'paper-blocks' ),
         ],
-        getEditWrapperProps(attributes) {
-            const { blockAlignment } = attributes;
-            if (
-              "left" === blockAlignment ||
-              "right" === blockAlignment ||
-              "full" === blockAlignment
-            ) {
-              return { "data-align": blockAlignment };
-            }
-          },
+        getEditWrapperProps() {
+            return { "data-align": "full" };
+        },
         attributes,
         edit: props => {
-            const { attributes: { title, subtitle, imgID, imgURL, imgAlt }, className, setAttributes, isSelected } = props;
+            const { attributes: { title, subtitle, imgID, imgURL, imgAlt, heroTextMod }, setAttributes, isSelected } = props;
             const onChangeTitle = title => { setAttributes( { title } ) };
             const onChangeSubtitle = subtitle => { setAttributes( { subtitle } ) };
             const onSelectImage = img => {
@@ -59,8 +52,9 @@ export default registerBlockType(
                 });
             }
             return (
-                <section className={ "paperpress-hero paperpress-is-fullheight-with-navbar  " + className }>
+                <section className={ "paperpress-hero paperpress-is-fullheight-with-navbar" }>
                     <Inspector {...{ setAttributes, ...props }} />
+                    <Controls {...{ setAttributes, ...props }} />
                     <div className="paperpress-hero-body">
                         <div className="paperpress-container">
                             <div className="paperpress-columns">
@@ -68,7 +62,7 @@ export default registerBlockType(
                                     <div>
                                         <RichText
                                             tagName="h1"
-                                            className="paperpress-title"
+                                            className={`paperpress-title ${ heroTextMod }`}
                                             placeholder="Hero Title."
                                             onChange={ onChangeTitle }
                                             value={ title }
@@ -137,7 +131,7 @@ export default registerBlockType(
             );
         },
         save: props => {
-            const { attributes: { title, subtitle, imgURL, imgAlt } } = props;
+            const { attributes: { title, subtitle, imgURL, imgAlt, heroTextMod } } = props;
             return (
                 <section className={ "paperpress-hero paperpress-is-fullheight-with-navbar  " }>
                     <div className="paperpress-hero-body">
@@ -145,7 +139,7 @@ export default registerBlockType(
                             <div className="paperpress-columns">
                                 <div className="paperpress-column">
                                     <div>
-                                        <h1 className="paperpress-title" dangerouslySetInnerHTML={ {
+                                        <h1 className={ `paperpress-title ${heroTextMod}` } dangerouslySetInnerHTML={ {
                                             __html: title,
                                         } }/>
                                         <p className="paperpress-subtitle" dangerouslySetInnerHTML={ { 
