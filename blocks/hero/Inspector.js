@@ -8,7 +8,7 @@ const {
   ColorPalette,
   PanelColorSettings,
   ContrastChecker
-} = wp.editor;
+} = wp.blockEditor;
 
 const {
   CheckboxControl,
@@ -45,17 +45,18 @@ export default class Inspector extends Component {
           initialOpen={false}
         >
           <PanelRow>
-            <RadioControl
-              label={__("Hero Headline Size", "paper-blocks")}
-              selected={heroTextMod}
+            <SelectControl
+              label={__("Headline Size", "paper-blocks")}
+              value={heroTextMod}
               options={[
-                { label: "Size 1", value: "is-size-1" },
-                { label: "Size 2", value: "is-size-2" },
-                { label: "Size 3", value: "is-size-3" },
-                { label: "Size 4", value: "is-size-4" },
-                { label: "Size 5", value: "is-size-5" },
-                { label: "Size 6", value: "is-size-6" },
-                { label: "Size 7", value: "is-size-7" },
+                { label: "None", value: "" },
+                { label: "Size 1", value: "paperpress-is-size-1" },
+                { label: "Size 2", value: "paperpress-is-size-2" },
+                { label: "Size 3", value: "paperpress-is-size-3" },
+                { label: "Size 4", value: "paperpress-is-size-4" },
+                { label: "Size 5", value: "paperpress-is-size-5" },
+                { label: "Size 6", value: "paperpress-is-size-6" },
+                { label: "Size 7", value: "paperpress-is-size-7" },
               ]}
               onChange={heroTextMod => setAttributes({ heroTextMod })}
             />
