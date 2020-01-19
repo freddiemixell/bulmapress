@@ -61,6 +61,7 @@ export default registerBlockType(
                                         <InnerBlocks
                                             allowedBlocks={ [ 'paperblocks/title' ] }
                                             template={ [[ 'paperblocks/title', { textContent: 'Placeholder' } ]] }
+                                            templateLock="all"
                                         />
                                         <RichText
                                             tagName="h1"
