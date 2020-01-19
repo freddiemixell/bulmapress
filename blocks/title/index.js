@@ -47,7 +47,7 @@ export default registerBlockType(
                         placeholder="Hero Title."
                         onChange={ onChangeText }
                         value={ textContent }
-                        formattingControls={[ 'italic' ]}
+                        formattingControls={[ 'italic', 'link' ]}
                     />
                 </Fragment>
             )
