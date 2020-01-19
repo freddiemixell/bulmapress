@@ -54,7 +54,6 @@ export default registerBlockType(
             return (
                 <section className={ "paperpress-hero paperpress-is-fullheight-with-navbar" }>
                     <Inspector {...{ setAttributes, ...props }} />
-                    <Controls {...{ setAttributes, ...props }} />
                     <div className="paperpress-hero-body">
                         <div className="paperpress-container">
                             <div className="paperpress-columns">
