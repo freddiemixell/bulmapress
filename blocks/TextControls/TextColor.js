@@ -6,11 +6,11 @@ const { __ } = wp.i18n;
 [
   {
     name: 'color',
-    title: 'Inline Text Colour'
+    title: 'Inline Text Color'
   },
   {
     name: 'background-color',
-    title: 'Inline Background Colour'
+    title: 'Inline Background Color'
   }
 ].forEach(({ name, title }) => {
   const type = `paperblocks/${name}`
