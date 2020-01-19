@@ -5,20 +5,11 @@ const { __ } = wp.i18n;
 const { Component } = wp.element;
 const {
   InspectorControls,
-  ColorPalette,
-  PanelColorSettings,
-  ContrastChecker
 } = wp.blockEditor;
 
 const {
-  CheckboxControl,
   PanelBody,
   PanelRow,
-  RadioControl,
-  RangeControl,
-  TextControl,
-  TextareaControl,
-  ToggleControl,
   SelectControl
 } = wp.components;
 
@@ -33,7 +24,9 @@ export default class Inspector extends Component {
   render() {
     const {
       attributes: {
-        heroTextMod
+        heroTextMod,
+        heroTextAlign,
+        heroSubTextAlign
       },
       setAttributes
     } = this.props;
@@ -59,6 +52,34 @@ export default class Inspector extends Component {
                 { label: "Size 7", value: "paperpress-is-size-7" },
               ]}
               onChange={heroTextMod => setAttributes({ heroTextMod })}
+            />
+          </PanelRow>
+          <PanelRow>
+            <SelectControl
+              label={__("Headline Alignment", "paper-blocks")}
+              value={heroTextAlign}
+              options={[
+                { label: "None", value: "" },
+                { label: "Center", value: "paperpress-has-text-centered" },
+                { label: "Justified", value: "paperpress-has-text-justified" },
+                { label: "Left", value: "paperpress-has-text-left" },
+                { label: "Right", value: "paperpress-has-text-right" },
+              ]}
+              onChange={heroTextAlign => setAttributes({ heroTextAlign })}
+            />
+          </PanelRow>
+          <PanelRow>
+            <SelectControl
+              label={__("Sub-headline Alignment", "paper-blocks")}
+              value={heroSubTextAlign}
+              options={[
+                { label: "None", value: "" },
+                { label: "Center", value: "paperpress-has-text-centered" },
+                { label: "Justified", value: "paperpress-has-text-justified" },
+                { label: "Left", value: "paperpress-has-text-left" },
+                { label: "Right", value: "paperpress-has-text-right" },
+              ]}
+              onChange={heroSubTextAlign => setAttributes({ heroSubTextAlign })}
             />
           </PanelRow>
         </PanelBody>

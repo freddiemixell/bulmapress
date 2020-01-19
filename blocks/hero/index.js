@@ -5,7 +5,6 @@
 import icons from './icons';
 import attributes from "./attributes";
 import Inspector from './Inspector';
-import Controls from './Controls';
 
 /**
  * Internal block libraries
@@ -34,7 +33,7 @@ export default registerBlockType(
         },
         attributes,
         edit: props => {
-            const { attributes: { title, subtitle, imgID, imgURL, imgAlt, heroTextMod }, setAttributes, isSelected } = props;
+            const { attributes: { title, subtitle, imgID, imgURL, imgAlt, heroTextMod, heroTextAlign, heroSubTextAlign }, setAttributes, isSelected } = props;
             const onChangeTitle = title => { setAttributes( { title } ) };
             const onChangeSubtitle = subtitle => { setAttributes( { subtitle } ) };
             const onSelectImage = img => {
@@ -61,14 +60,14 @@ export default registerBlockType(
                                     <div>
                                         <RichText
                                             tagName="h1"
-                                            className={`paperpress-title ${ heroTextMod }`}
+                                            className={`paperpress-title ${ heroTextMod } ${ heroTextAlign }`}
                                             placeholder="Hero Title."
                                             onChange={ onChangeTitle }
                                             value={ title }
                                         />
                                         <RichText
                                             tagName="p"
-                                            className="paperpress-subtitle"
+                                            className={ `paperpress-subtitle ${ heroSubTextAlign }` }
                                             placeholder="Hero subtitle goes here."
                                             onChange={ onChangeSubtitle }
                                             value={ subtitle }
@@ -130,7 +129,7 @@ export default registerBlockType(
             );
         },
         save: props => {
-            const { attributes: { title, subtitle, imgURL, imgAlt, heroTextMod } } = props;
+            const { attributes: { title, subtitle, imgURL, imgAlt, heroTextMod, heroTextAlign, heroSubTextAlign } } = props;
             return (
                 <section className={ "paperpress-hero paperpress-is-fullheight-with-navbar  " }>
                     <div className="paperpress-hero-body">
@@ -138,10 +137,10 @@ export default registerBlockType(
                             <div className="paperpress-columns">
                                 <div className="paperpress-column">
                                     <div>
-                                        <h1 className={ `paperpress-title ${heroTextMod}` } dangerouslySetInnerHTML={ {
+                                        <h1 className={ `paperpress-title ${heroTextMod} ${ heroTextAlign }` } dangerouslySetInnerHTML={ {
                                             __html: title,
                                         } }/>
-                                        <p className="paperpress-subtitle" dangerouslySetInnerHTML={ { 
+                                        <p className={ `paperpress-subtitle ${ heroSubTextAlign }` } dangerouslySetInnerHTML={ { 
                                             __html: subtitle,
                                          } }/>
                                         <div className="paperpress-buttons">

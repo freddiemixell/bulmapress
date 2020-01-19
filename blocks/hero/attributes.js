@@ -29,6 +29,12 @@ const attributes = {
     },
     heroTextMod: {
       type: 'string',
+    },
+    heroTextAlign: {
+      type: 'string'
+    },
+    heroSubTextAlign: {
+      type: 'string'
     }
   };
   
