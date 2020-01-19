@@ -1,4 +1,5 @@
 import Controls from './Controls';
+import Inspector from './Inspector';
 
 const { registerBlockType } = wp.blocks;
 const { RichText,  } = wp.blockEditor;
@@ -41,6 +42,7 @@ export default registerBlockType(
             return (
                 <Fragment>
                     <Controls {...{ setAttributes, ...props }} />
+                    <Inspector {...{ setAttributes, ...props }} />
                     <RichText
                         tagName={ `h${level}` }
                         className={`paperpress-title ${ typeof alignment !== 'undefined' ? alignment : '' } ${ typeof weight !== 'undefined' ? weight : '' }`}
