@@ -51,7 +51,7 @@ export function TextWeightToolbar( props ) {
 		return () => onChange( value === weight ? undefined : weight );
 	}
 
-	const activeWeight = find( weightControls, ( control ) => control.align === value );
+	const activeWeight = find( weightControls, ( control ) => control.weight === value );
 
 	return (
 		<Toolbar
