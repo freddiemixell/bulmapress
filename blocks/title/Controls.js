@@ -5,10 +5,10 @@ const { __ } = wp.i18n;
 const { Component } = wp.element;
 const {
     BlockControls,
-    AlignmentToolbar,
 } = wp.blockEditor;
 
 import HeadingToolbar from './HeadingToolbar';
+import AlignToolbar from '../TextControls/AlignToolbar';
 
 
 /**
@@ -22,15 +22,15 @@ export default class Controls extends Component {
     render() {
         const { attributes: { alignment, level }, setAttributes } = this.props;
         const onChangeAlign = alignment => {
-            console.log(alignment)
             setAttributes( { alignment } )
         }
         return (
             <BlockControls>
                 <HeadingToolbar minLevel={ 1 } maxLevel={ 5 } selectedLevel={ level } onChange={ ( newLevel ) => setAttributes( { level: newLevel } ) } />
-                <AlignmentToolbar
+                <AlignToolbar
                     value={ alignment }
                     onChange={ onChangeAlign }
+                    withJustify={ false }
                 />
             </BlockControls>
         );
