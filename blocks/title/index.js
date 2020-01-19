@@ -32,7 +32,7 @@ export default registerBlockType(
             },
         },
         edit: props => {
-            const { attributes: { textContent, level }, setAttributes } = props;
+            const { attributes: { textContent, level, alignment }, setAttributes } = props;
             const onChangeText = textContent => { setAttributes( { textContent } ) };
 
             return (
@@ -40,7 +40,7 @@ export default registerBlockType(
                     <Controls {...{ setAttributes, ...props }} />
                     <RichText
                         tagName={ `h${level}` }
-                        className={`paperpress-title`}
+                        className={`paperpress-title ${alignment}`}
                         placeholder="Hero Title."
                         onChange={ onChangeText }
                         value={ textContent }
@@ -49,12 +49,12 @@ export default registerBlockType(
             )
         },
         save: props => {
-            const { textContent, level } = props.attributes;
+            const { textContent, level, alignment } = props.attributes;
 
             return (
                 <RichText.Content
                     tagName={ `h${level}` }
-                    className={ `paperpress-title` }
+                    className={ `paperpress-title ${alignment}` }
                     value={ textContent }
                 />
             );
