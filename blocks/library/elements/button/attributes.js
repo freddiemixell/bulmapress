@@ -34,4 +34,31 @@ export default {
     buttonSubset: {
         type: 'string',
     },
+    isPrimary: {
+        type: 'string',
+    },
+    isOutlined: {
+        type: 'string',
+    },
+    isLink: {
+        type: 'string',
+    },
+    isInfo: {
+        type: 'string',
+    },
+    isPrimary: {
+        type: 'string',
+    },
+    isSuccess: {
+        type: 'string',
+    },
+    isDanger: {
+        type: 'string',
+    },
+    isInverted: {
+        type: 'string',
+    },
+    isRounded: {
+        type: 'string',
+    },
 }
