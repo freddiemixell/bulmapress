@@ -1,38 +1,28 @@
 {
-  "main.css": "theme/main-c800cb83.css",
-  "main.css.map": "theme/main-c800cb83.css.map",
-  "main.js": "theme/main-c5ec9972.js",
-  "main.js.map": "theme/main-c5ec9972.js.map",
-  "paperBlocks.js": "theme/paperBlocks-d63c0bfa.js",
-  "paperBlocks.js.map": "theme/paperBlocks-d63c0bfa.js.map",
-  "runtime.js": "theme/runtime-d66e3a9f.js",
-  "runtime.js.map": "theme/runtime-d66e3a9f.js.map",
+  "main.css": "theme/main.css",
+  "main.js": "theme/main.js",
+  "paperBlocks.js": "theme/paperBlocks.js",
+  "runtime.js": "theme/runtime.js",
   "theme/assets/PlatformWeb-Medium.ttf": "theme/assets/PlatformWeb-Medium-5abdb50e.ttf",
+  "vendors~main.js": "theme/vendors~main.js",
+  "vendors~main~paperBlocks.js": "theme/vendors~main~paperBlocks.js",
   "wpackioEp": {
     "main": {
       "js": [
-        "theme/runtime-d66e3a9f.js",
-        "theme/main-c5ec9972.js"
-      ],
-      "js.map": [
-        "theme/runtime-d66e3a9f.js.map",
-        "theme/main-c5ec9972.js.map"
+        "theme/runtime.js",
+        "theme/vendors~main~paperBlocks.js",
+        "theme/vendors~main.js",
+        "theme/main.js"
       ],
       "css": [
-        "theme/main-c800cb83.css"
-      ],
-      "css.map": [
-        "theme/main-c800cb83.css.map"
+        "theme/main.css"
       ]
     },
     "paperBlocks": {
       "js": [
-        "theme/runtime-d66e3a9f.js",
-        "theme/paperBlocks-d63c0bfa.js"
-      ],
-      "js.map": [
-        "theme/runtime-d66e3a9f.js.map",
-        "theme/paperBlocks-d63c0bfa.js.map"
+        "theme/runtime.js",
+        "theme/vendors~main~paperBlocks.js",
+        "theme/paperBlocks.js"
       ]
     }
   }
