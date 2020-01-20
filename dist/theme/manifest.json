@@ -1,52 +1,74 @@
 {
-  "hero.js": "theme/hero.js",
-  "main.css": "theme/main.css",
-  "main.js": "theme/main.js",
-  "runtime.js": "theme/runtime.js",
-  "subtitle.js": "theme/subtitle.js",
-  "textControls.js": "theme/textControls.js",
+  "hero.js": "theme/hero-1a239b94.js",
+  "hero.js.map": "theme/hero-1a239b94.js.map",
+  "main.css": "theme/main-c800cb83.css",
+  "main.css.map": "theme/main-c800cb83.css.map",
+  "main.js": "theme/main-b9185876.js",
+  "main.js.map": "theme/main-b9185876.js.map",
+  "runtime.js": "theme/runtime-d66e3a9f.js",
+  "runtime.js.map": "theme/runtime-d66e3a9f.js.map",
+  "subtitle.js": "theme/subtitle-50f032e6.js",
+  "subtitle.js.map": "theme/subtitle-50f032e6.js.map",
+  "textControls.js": "theme/textControls-805e4e53.js",
+  "textControls.js.map": "theme/textControls-805e4e53.js.map",
   "theme/assets/PlatformWeb-Medium.ttf": "theme/assets/PlatformWeb-Medium-5abdb50e.ttf",
-  "title.js": "theme/title.js",
-  "vendors~hero~main~subtitle~textControls~title.js": "theme/vendors~hero~main~subtitle~textControls~title.js",
-  "vendors~main.js": "theme/vendors~main.js",
+  "title.js": "theme/title-fd19eccc.js",
+  "title.js.map": "theme/title-fd19eccc.js.map",
   "wpackioEp": {
     "main": {
       "js": [
-        "theme/runtime.js",
-        "theme/vendors~hero~main~subtitle~textControls~title.js",
-        "theme/vendors~main.js",
-        "theme/main.js"
+        "theme/runtime-d66e3a9f.js",
+        "theme/main-b9185876.js"
+      ],
+      "js.map": [
+        "theme/runtime-d66e3a9f.js.map",
+        "theme/main-b9185876.js.map"
       ],
       "css": [
-        "theme/main.css"
+        "theme/main-c800cb83.css"
+      ],
+      "css.map": [
+        "theme/main-c800cb83.css.map"
       ]
     },
     "hero": {
       "js": [
-        "theme/runtime.js",
-        "theme/vendors~hero~main~subtitle~textControls~title.js",
-        "theme/hero.js"
+        "theme/runtime-d66e3a9f.js",
+        "theme/hero-1a239b94.js"
+      ],
+      "js.map": [
+        "theme/runtime-d66e3a9f.js.map",
+        "theme/hero-1a239b94.js.map"
       ]
     },
     "textControls": {
       "js": [
-        "theme/runtime.js",
-        "theme/vendors~hero~main~subtitle~textControls~title.js",
-        "theme/textControls.js"
+        "theme/runtime-d66e3a9f.js",
+        "theme/textControls-805e4e53.js"
+      ],
+      "js.map": [
+        "theme/runtime-d66e3a9f.js.map",
+        "theme/textControls-805e4e53.js.map"
       ]
     },
     "title": {
       "js": [
-        "theme/runtime.js",
-        "theme/vendors~hero~main~subtitle~textControls~title.js",
-        "theme/title.js"
+        "theme/runtime-d66e3a9f.js",
+        "theme/title-fd19eccc.js"
+      ],
+      "js.map": [
+        "theme/runtime-d66e3a9f.js.map",
+        "theme/title-fd19eccc.js.map"
       ]
     },
     "subtitle": {
       "js": [
-        "theme/runtime.js",
-        "theme/vendors~hero~main~subtitle~textControls~title.js",
-        "theme/subtitle.js"
+        "theme/runtime-d66e3a9f.js",
+        "theme/subtitle-50f032e6.js"
+      ],
+      "js.map": [
+        "theme/runtime-d66e3a9f.js.map",
+        "theme/subtitle-50f032e6.js.map"
       ]
     }
   }
