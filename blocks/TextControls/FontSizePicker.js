@@ -1,5 +1,5 @@
 const { Component, Fragment } = wp.element;
-const { SelectControl, Button, TextControl } = wp.components;
+const { Button } = wp.components;
 const { __ } = wp.i18n;
 
 export default class FontSizePicker extends Component {
@@ -20,7 +20,6 @@ export default class FontSizePicker extends Component {
     render() {
         const {
             attributes: {
-              textSize,
               textSizeCustom,
             },
             setAttributes
