@@ -10,16 +10,6 @@ if ( ! function_exists( 'paper_press_setup' ) ) :
      * Sets up Paper Press's defaults and registers support for various WordPress features
      */
     function paper_press_setup() {
-    
-        /**
-         * Load Getting Started page
-         *
-         * @todo Add getting started sequence for customers.
-         */
-        // if( ! function_exists( 'paper_press_loader' ) ) {
-        //     require_once( get_template_directory() . '/inc/admin/getting-started/getting-started.php' );
-        // }
-    
         /*
          * Make theme available for translation
          */
@@ -57,9 +47,6 @@ if ( ! function_exists( 'paper_press_setup' ) ) :
          * Selective Refresh for Customizer
          */
         add_theme_support( 'customize-selective-refresh-widgets' );
-    
-        // Add excerpt support to pages
-        add_post_type_support( 'page', 'excerpt' );
     
         // Featured image
         add_image_size( 'paper-press-featured-image', 1200 );

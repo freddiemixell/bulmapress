@@ -41,28 +41,6 @@ add_filter( 'body_class', 'paper_press_layout_class' );
 
 
 /**
- * Add featured image class to posts
- */
-function paper_press_featured_image_class( $classes ) {
-	global $post;
-
-	$classes[] = 'post';
-
-	// Check for featured image
-	$classes[] = has_post_thumbnail() ? 'with-featured-image' : 'without-featured-image';
-
-	$page_template = get_post_meta( $post->ID, '_wp_page_template', true );
-
-	if ( $page_template == 'templates/template-wide-image.php' ) {
-		$classes[] = 'has-wide-image';
-	}
-
-	return $classes;
-}
-add_filter( 'post_class', 'paper_press_featured_image_class' );
-
-
-/**
  * Adjust the grid excerpt length for portfolio items
  */
 function paper_press_search_excerpt_length() {

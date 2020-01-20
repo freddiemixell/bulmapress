@@ -3,7 +3,9 @@
   "main.js": "theme/main.js",
   "paperBlocks.js": "theme/paperBlocks.js",
   "runtime.js": "theme/runtime.js",
+  "theme/assets/PlatformWeb-Medium.eot": "theme/assets/PlatformWeb-Medium-3ce8f0c9.eot",
   "theme/assets/PlatformWeb-Medium.ttf": "theme/assets/PlatformWeb-Medium-5abdb50e.ttf",
+  "theme/assets/PlatformWeb-Medium.woff": "theme/assets/PlatformWeb-Medium-e2a90668.woff",
   "vendors~main.js": "theme/vendors~main.js",
   "vendors~main~paperBlocks.js": "theme/vendors~main~paperBlocks.js",
   "wpackioEp": {
