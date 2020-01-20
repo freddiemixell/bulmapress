@@ -2,9 +2,6 @@ export default {
     textContent: {
         type: 'string',
     },
-    alignment: {
-        type: 'string',
-    },
     weight: {
         type: 'string'
     },
@@ -22,5 +19,9 @@ export default {
     },
     italic: {
         type: "string"
+    },
+    href: {
+        type: 'string',
+        default: '#'
     }
 }
