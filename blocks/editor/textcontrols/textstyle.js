@@ -1,4 +1,5 @@
 import PanelSection from '../components/panelsection';
+import ControlGroup from '../components/controlgroup';
 
 const { Button } = wp.components;
 const { __ } = wp.i18n;
@@ -13,7 +14,7 @@ const TextStyle = ( {
 } ) => {
     return (
         <PanelSection label={ __( 'Text Style', 'paper-blocks' ) }>
-            <div style={{margin: 0, border: '1px solid #e2e4e7', backgroundColor: '#fff', display: 'flex', justifyContent: 'space-between', flexShrink: 0}}>
+            <ControlGroup>
                 <Button
                     icon='editor-italic'
                     label='italic'
@@ -59,7 +60,7 @@ const TextStyle = ( {
                         setAttributes({alignment: alignment !== 'paperpress-has-text-right' ? 'paperpress-has-text-right' : ''})
                     }}
                 />
-            </div>
+            </ControlGroup>
         </PanelSection>
     )
 }
