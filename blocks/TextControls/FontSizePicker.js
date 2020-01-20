@@ -51,12 +51,14 @@ export default class FontSizePicker extends Component {
                     </div>
 
                     <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '25%'}}>
-                            <label for="paper-press-custom-text-size">Custom</label>
+                            <label htmlFor="paper-press-custom-text-size">Custom</label>
                             <input
                                 id="paper-press-custom-text-size"
                                 type="number"
                                 value={ parseInt( textSizeCustom ) || 0 }
-                                onChange={ textSizeCustom => setAttributes( { textSizeCustom: parseInt( textSizeCustom ) } ) }
+                                onChange={ event => {
+                                    setAttributes( { textSizeCustom: parseInt( event.target.value ) } )
+                                } }
                                 style={{width: '100%', margin: '1px'}}
                             />
                     </div>
