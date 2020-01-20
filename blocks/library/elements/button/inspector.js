@@ -2,13 +2,14 @@ import FontSizePicker from '../../../editor/textcontrols/textsize';
 import TextTransform from '../../../editor/textcontrols/texttransform';
 import TextColor from '../../../editor/textcontrols/textcolor';
 import ButtonColor from '../../../editor/buttoncontrols/buttoncolor';
+import ButtonSubset from '../../../editor/buttoncontrols/buttonsubset';
 
 const { __ } = wp.i18n;
 const { InspectorControls } = wp.blockEditor;
 const {  PanelBody } = wp.components;
 
 const Inspector = ( props ) => {
-  const { attributes: { textColor, buttonColor }, setAttributes } = props;
+  const { attributes: { textColor, buttonColor, buttonSubset }, setAttributes } = props;
   return (
     <InspectorControls>
       <PanelBody
@@ -25,6 +26,10 @@ const Inspector = ( props ) => {
         />
         <FontSizePicker {...{ setAttributes, ...props }} />
         <TextTransform {...{ setAttributes, ...props }} />
+        <ButtonSubset
+          setAttributes={ setAttributes }
+          buttonSubset={ buttonSubset }
+        />
       </PanelBody>
     </InspectorControls>
   );
