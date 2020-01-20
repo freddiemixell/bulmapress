@@ -42,6 +42,11 @@ if ( ! function_exists( 'paper_press_setup' ) ) :
          * Add wide image support
          */
         add_theme_support( 'align-wide' );
+
+        /**
+         * Editor Styles
+         */
+        add_theme_support( 'editor-styles' );
     
         /**
          * Selective Refresh for Customizer
