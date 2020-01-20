@@ -1,36 +1,62 @@
 {
-  "hero.js": "theme/hero.js",
-  "main.css": "theme/main.css",
-  "main.js": "theme/main.js",
-  "runtime.js": "theme/runtime.js",
-  "textControls.js": "theme/textControls.js",
+  "hero.js": "theme/hero-142d8f12.js",
+  "hero.js.map": "theme/hero-142d8f12.js.map",
+  "main.css": "theme/main-c800cb83.css",
+  "main.css.map": "theme/main-c800cb83.css.map",
+  "main.js": "theme/main-b6cea641.js",
+  "main.js.map": "theme/main-b6cea641.js.map",
+  "runtime.js": "theme/runtime-d66e3a9f.js",
+  "runtime.js.map": "theme/runtime-d66e3a9f.js.map",
+  "textControls.js": "theme/textControls-55cfd4a2.js",
+  "textControls.js.map": "theme/textControls-55cfd4a2.js.map",
   "theme/assets/PlatformWeb-Medium.ttf": "theme/assets/PlatformWeb-Medium-5abdb50e.ttf",
-  "vendors~hero~main~textControls.js": "theme/vendors~hero~main~textControls.js",
-  "vendors~main.js": "theme/vendors~main.js",
+  "title.js": "theme/title-59aaa376.js",
+  "title.js.map": "theme/title-59aaa376.js.map",
   "wpackioEp": {
     "main": {
       "js": [
-        "theme/runtime.js",
-        "theme/vendors~hero~main~textControls.js",
-        "theme/vendors~main.js",
-        "theme/main.js"
+        "theme/runtime-d66e3a9f.js",
+        "theme/main-b6cea641.js"
+      ],
+      "js.map": [
+        "theme/runtime-d66e3a9f.js.map",
+        "theme/main-b6cea641.js.map"
       ],
       "css": [
-        "theme/main.css"
+        "theme/main-c800cb83.css"
+      ],
+      "css.map": [
+        "theme/main-c800cb83.css.map"
       ]
     },
     "hero": {
       "js": [
-        "theme/runtime.js",
-        "theme/vendors~hero~main~textControls.js",
-        "theme/hero.js"
+        "theme/runtime-d66e3a9f.js",
+        "theme/hero-142d8f12.js"
+      ],
+      "js.map": [
+        "theme/runtime-d66e3a9f.js.map",
+        "theme/hero-142d8f12.js.map"
       ]
     },
     "textControls": {
       "js": [
-        "theme/runtime.js",
-        "theme/vendors~hero~main~textControls.js",
-        "theme/textControls.js"
+        "theme/runtime-d66e3a9f.js",
+        "theme/textControls-55cfd4a2.js"
+      ],
+      "js.map": [
+        "theme/runtime-d66e3a9f.js.map",
+        "theme/textControls-55cfd4a2.js.map"
+      ]
+    },
+    "title": {
+      "js": [
+        "theme/runtime-d66e3a9f.js",
+        "theme/title-59aaa376.js"
+      ],
+      "js.map": [
+        "theme/runtime-d66e3a9f.js.map",
+        "theme/title-59aaa376.js.map"
       ]
     }
   }
