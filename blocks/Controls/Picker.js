@@ -15,7 +15,6 @@ export default class Picker extends Component {
         const mappedOptions = this.props.options.map( ( { label, value } ) => {
             return (
                 <Fragment key={ `${label}${value}` }>
-                    <label>{ label }</label>
                     <option value={ value }>{ label }</option>
                 </Fragment>
             );
@@ -23,7 +22,7 @@ export default class Picker extends Component {
 
         return (
             <Fragment>
-                { typeof this.props.label !== 'undefined' ? <label for={ this.props.id }>{ this.props.label }</label> : null }
+                { typeof this.props.label !== 'undefined' ? <label htmlFor={ this.props.id }>{ this.props.label }</label> : null }
                 <select
                     id={ this.props.id }
                     className="components-select-control__input"
