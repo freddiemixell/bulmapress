@@ -30,10 +30,7 @@ module.exports = {
 			name: 'theme',
 			entry: {
 				main: ['./src/theme/index.js'],
-				hero: [ './blocks/hero/index.js' ],
-				textControls: ['./blocks/TextControls/index.js'],
-				title: [ './blocks/title/index.js' ],
-				subtitle: [ './blocks/subtitle/index.js' ],
+				paperBlocks: [ './blocks/library/index.js' ],
 			},
 			webpackConfig: (config, merge, appDir, isDev) => {
 				const svgoLoader = {

@@ -62,24 +62,9 @@ if ( ! function_exists( 'paperpress_enqueue' ) ) {
 		$enqueue->enqueue( 'theme', 'main', [] );
 		$enqueue->enqueue(
             'theme',
-            'hero',
+            'paperBlocks',
             [ 'wp-i18n', 'wp-element', 'wp-blocks', 'wp-components', 'wp-editor' ]
 		);
-		$enqueue->enqueue(
-            'theme',
-            'textControls',
-            [ 'wp-i18n', 'wp-element', 'wp-blocks', 'wp-components', 'wp-editor' ]
-		);
-		$enqueue->enqueue(
-            'theme',
-            'title',
-            [ 'wp-i18n', 'wp-element', 'wp-blocks', 'wp-components', 'wp-editor' ]
-		);
-		$enqueue->enqueue(
-            'theme',
-            'subtitle',
-            [ 'wp-i18n', 'wp-element', 'wp-blocks', 'wp-components', 'wp-editor' ]
-        );
 	}
 
 	add_action( 'wp_enqueue_scripts', 'paperpress_enqueue' );

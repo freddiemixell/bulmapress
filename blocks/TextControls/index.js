@@ -1,2 +1,0 @@
-import './InlineTextColor';
-import './RemoveFormat';
