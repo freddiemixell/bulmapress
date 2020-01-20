@@ -27,7 +27,7 @@ if ( ! function_exists( 'paperpress_block_editor_assets_enqueue' ) ) {
 		$enqueue->enqueue(
             'theme',
             'paperBlocks',
-            [ 'wp-i18n', 'wp-element', 'wp-blocks', 'wp-components', 'wp-editor' ]
+            [ 'wp-i18n', 'wp-element', 'wp-blocks', 'wp-components', 'wp-editor', 'wp-keycodes' ]
 		);
 	}
 
@@ -40,6 +40,18 @@ if ( ! function_exists( 'paperpress_shared_assets_enqueue' ) ) {
 	 * Enqueue assets for frontend and editor.
 	 */
 	function paperpress_shared_assets_enqueue() {
+		wp_enqueue_style( 'paperpress-fonts', paper_press_fonts_url(), array(), null );	
+		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . "/inc/fontawesome/css/fontawesome-all.css", array(), '5.0.12', 'screen' );
+	}
+
+	add_action( 'enqueue_block_assets', 'paperpress_shared_assets_enqueue' );
+}
+
+/**
+ * Frontend only assets.
+ */
+if ( ! function_exists( 'paperpress_frontend_assets_enqueue' ) ) {
+	function paperpress_frontend_assets_enqueue() {
 		$enqueue = new WebpackEnqueue(
 			// Name of the project, same as `appName` in wpackio.project.js
 			'paperPress',
@@ -53,13 +65,10 @@ if ( ! function_exists( 'paperpress_shared_assets_enqueue' ) ) {
 			false
 		);
 
-		wp_enqueue_style( 'paperpress-fonts', paper_press_fonts_url(), array(), null );	
-		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . "/inc/fontawesome/css/fontawesome-all.css", array(), '5.0.12', 'screen' );
-
 		$enqueue->enqueue( 'theme', 'main', [] );
 	}
 
-	add_action( 'enqueue_block_assets', 'paperpress_shared_assets_enqueue' );
+	add_action( 'wp_enqueue_scripts', 'paperpress_frontend_assets_enqueue' );
 }
 
 /**
