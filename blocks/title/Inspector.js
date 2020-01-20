@@ -15,6 +15,7 @@ const {
 import HeadingToolbar from './HeadingToolbar';
 import FontSizePicker from '../TextControls/FontSizePicker';
 import TextTransform from '../TextControls/TextTransform';
+import TextStyle from '../TextControls/TextStyle';
 
 /**
  * Create an Inspector Controls wrapper Component
@@ -40,18 +41,21 @@ export default class Inspector extends Component {
           initialOpen={false}
         >
 
-                <p>{ __( 'Level' ) }</p>
+                <p style={{paddingBottom: '13px'}}>{ __( 'Level' ) }</p>
                 <HeadingToolbar isCollapsed={ false } minLevel={ 1 } maxLevel={ 7 } selectedLevel={ level } onChange={ ( newLevel ) => setAttributes( { level: newLevel } ) } />
 
-                <p>{ __( 'Color' ) }</p>
-                <ColorPalette
-                    value={textColor}
-                    onChange={textColor => {
-                        setAttributes({ textColor });
-                    }}
-                />
+                <div style={{marginBottom: '19.5px'}}>
+                  <p>{ __( 'Color' ) }</p>
+                  <ColorPalette
+                      value={textColor}
+                      onChange={textColor => {
+                          setAttributes({ textColor });
+                      }}
+                  />
+                </div>
                 <FontSizePicker {...{ setAttributes, ...this.props }} />
                 <TextTransform {...{ setAttributes, ...this.props }} />
+                <TextStyle/>
         </PanelBody>
       </InspectorControls>
     );
