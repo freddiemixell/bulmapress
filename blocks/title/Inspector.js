@@ -55,7 +55,7 @@ export default class Inspector extends Component {
                 </div>
                 <FontSizePicker {...{ setAttributes, ...this.props }} />
                 <TextTransform {...{ setAttributes, ...this.props }} />
-                <TextStyle/>
+                <TextStyle {...{ setAttributes, ...this.props }} />
         </PanelBody>
       </InspectorControls>
     );

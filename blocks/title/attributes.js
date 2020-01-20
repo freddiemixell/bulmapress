@@ -25,5 +25,8 @@ export default {
     },
     transform: {
         type: "string"
+    },
+    italic: {
+        type: "string"
     }
 }
