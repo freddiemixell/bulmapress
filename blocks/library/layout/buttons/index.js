@@ -1,3 +1,4 @@
+import attributes from './attributes';
 import edit from './edit';
 import save from './save';
 
@@ -15,7 +16,7 @@ export default registerBlockType(
             __( 'Button group', 'paper-blocks' ),
             __( 'Bulma', 'paper-blocks' ),
         ],
-        attributes: {},
+        attributes,
         edit,
         save,
     },
