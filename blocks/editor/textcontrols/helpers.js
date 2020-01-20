@@ -12,7 +12,7 @@ const inlineStyles = (props) => {
 }
 
 const getClassNames = (props) => {
-    const { attributes: { alignment, weight, textSize, transform, italic, buttonSubset } } = props
+    const { attributes: { alignment, weight, textSize, transform, italic, buttonSubset, buttonGroupMod } } = props
     let classNames = [];
     if ( typeof alignment !== 'undefined' ) {
         classNames = [ ...classNames, alignment ]
@@ -31,6 +31,9 @@ const getClassNames = (props) => {
     }
     if ( typeof buttonSubset !== 'undefined' ) {
         classNames = [ ...classNames, buttonSubset ]
+    }
+    if ( typeof buttonGroupMod !== 'undefined' ) {
+        classNames = [ ...classNames, buttonGroupMod ]
     }
     return classNames.join( ' ' );
 }
