@@ -1,6 +1,18 @@
-const { Component, Fragment } = wp.element;
+import Picker from '../Controls/Picker';
+import PanelSection from '../Controls/PanelSection';
+
+const { Component } = wp.element;
 const { Button } = wp.components;
 const { __ } = wp.i18n;
+
+const options = [
+    { label: "default", value: "" },
+    { label: "Huge", value: "paperpress-is-size-1" },
+    { label: "Large", value: "paperpress-is-size-2" },
+    { label: "Medium", value: "paperpress-is-size-3" },
+    { label: "Normal", value: "paperpress-is-size-4" },
+    { label: "Small", value: "paperpress-is-size-5" },
+];
 
 export default class FontSizePicker extends Component {
     constructor() {
@@ -25,40 +37,17 @@ export default class FontSizePicker extends Component {
             setAttributes
         } = this.props;
 
-        const options = [
-            { label: "default", value: "" },
-            { label: "Huge", value: "paperpress-is-size-1" },
-            { label: "Large", value: "paperpress-is-size-2" },
-            { label: "Medium", value: "paperpress-is-size-3" },
-            { label: "Normal", value: "paperpress-is-size-4" },
-            { label: "Small", value: "paperpress-is-size-5" },
-        ].map( ( { label, value } ) => {
-            return (
-                <Fragment key={ `${label}${value}` }>
-                    <label>{ label }</label>
-                    <option value={ value }>{ label }</option>
-                </Fragment>
-            );
-        } );
-
         return (
+            <PanelSection label={ __( 'Font Size', 'paper-blocks' ) }>
             <fieldset>
-                <legend style={{marginBottom: '13px'}}>
-                    { __( 'Font Size' ) }
-                </legend>
-                <div style={{display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '19.5px'}}>
+                <div style={{display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between'}}>
 
                     <div  style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '40%'}}>
-                        <label for="paper-press-preset-size">Preset Size</label>
-                        <select
-                            id="paper-press-preset-size"
-                            className="components-select-control__input"
-                            onChange={ this.onChangeSelect }
-                        >
-                            {
-                                options
-                            }
-                        </select>
+                        <Picker
+                            label={ __( 'Preset Size', 'paper-blocks' ) }
+                            options={ options }
+                            onChange={ textSize => setAttributes( { textSize } )}
+                        />
                     </div>
 
                     <div style={{display: 'flex', flexDirection: 'column', alignItems: 'flex-start', width: '25%'}}>
@@ -84,6 +73,7 @@ export default class FontSizePicker extends Component {
 
                 </div>
             </fieldset>
+            </PanelSection>
         )
     }
 }
