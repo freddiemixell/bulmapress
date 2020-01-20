@@ -1,4 +1,4 @@
-import PanelSection from '..//components/panelsection';
+import PanelSection from '../components/panelsection';
 
 const { ColorPalette } = wp.blockEditor;
 const { __ } = wp.i18n;
