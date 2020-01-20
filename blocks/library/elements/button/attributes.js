@@ -30,5 +30,8 @@ export default {
     },
     buttonColor: {
         type: 'string'
+    },
+    subset: {
+        type: 'string',
     }
 }
