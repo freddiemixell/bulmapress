@@ -13,7 +13,7 @@ const Inspector = ( props ) => {
     <InspectorControls>
       <PanelBody
         title={ __( 'Subtitle Settings', 'paper-blocks' ) }
-        initialOpen={false}
+        initialOpen={true}
       >
         <TextColor
           setAttributes={ setAttributes }

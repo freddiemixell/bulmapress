@@ -1,5 +1,5 @@
 import HeadingToolbar from './headingtoolbar';
-import FontSizePicker from '../../../editor/textcontrols/textcolor';
+import FontSizePicker from '../../../editor/textcontrols/textsize';
 import TextTransform from '../../../editor/textcontrols/texttransform';
 import TextStyle from '../../../editor/textcontrols/textstyle';
 import TextColor from '../../../editor/textcontrols/textcolor';
@@ -14,7 +14,7 @@ const Inspector = ( props ) => {
     <InspectorControls>
       <PanelBody
         title={ __( 'Title Settings', 'paper-blocks' ) }
-        initialOpen={false}
+        initialOpen={true}
       >
         <HeadingToolbar
           isCollapsed={ false }
