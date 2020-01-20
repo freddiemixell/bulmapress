@@ -11,14 +11,14 @@ const options = [
     { label: __( 'Large', 'paper-blocks' ), value: 'paperpress-is-large' },
 ];
 
-const ButtonSubset = ( { subset, setAttributes } ) => {
+const ButtonSubset = ( { buttonSubset, setAttributes } ) => {
   return (
     <PanelSection label={ __( 'Subset', 'paper-blocks' ) }>
       <Picker
         options={ options }
-        value={ subset }
-        onChange={ subset => {
-          setAttributes( { subset } );
+        value={ buttonSubset }
+        onChange={ buttonSubset => {
+          setAttributes( { buttonSubset } );
         }}
       />
     </PanelSection>
