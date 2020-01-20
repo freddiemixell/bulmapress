@@ -2,7 +2,7 @@ export default {
     textContent: {
         type: 'string',
         source: 'html',
-        selector: '.paperpress-title',
+        selector: '.paperpress-subtitle',
     },
     alignment: {
         type: 'string',
