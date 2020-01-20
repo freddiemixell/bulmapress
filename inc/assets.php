@@ -7,13 +7,12 @@
 
 if ( ! function_exists( 'paperpress_enqueue' ) ) {
 	// Require the composer autoload for getting conflict-free access to enqueue
-    require_once( get_template_directory() . '/vendor/autoload.php' );
+	require_once( get_template_directory() . '/vendor/autoload.php' );
 
 	/**
 	 * Enqueue Paperpress Assets
 	 */
 	function paperpress_enqueue() {
-		// Instantiate
 		$enqueue = new \WPackio\Enqueue(
 			// Name of the project, same as `appName` in wpackio.project.js
 			'paperPress',
@@ -26,21 +25,6 @@ if ( ! function_exists( 'paperpress_enqueue' ) ) {
 			// Plugin location, pass false in case of theme.
 			false
 		);
-		// Example of how to localize php in js.
-		// $assets = $enqueue->enqueue( 'theme', 'main', [
-		// 	'js' => true,
-		// 	'css' => true,
-		// 	'js_dep' => [],
-		// 	'css_dep' => [],
-		// 	'in_footer' => true,
-		// 	'media' => 'all',
-		// ] );
-
-		// $entry_point = array_pop( $assets['js'] );
-
-		// wp_localize_script( $entry_point['handle'], 'paper_press_js_vars', [
-		// 	'ajaxurl' => esc_url ( admin_url( 'admin-ajax.php' ) )
-		// ] );
 
 		/**
 		 * Load fonts from Google
@@ -60,15 +44,36 @@ if ( ! function_exists( 'paperpress_enqueue' ) ) {
 		}
 
 		$enqueue->enqueue( 'theme', 'main', [] );
+	}
+
+	function paperpress_blocks_enqueue( $enqueue ) {
+		$enqueue = new \WPackio\Enqueue(
+			// Name of the project, same as `appName` in wpackio.project.js
+			'paperPress',
+			// Output directory, same as `outputPath` in wpackio.project.js
+			'dist',
+			// Version of your plugin
+			'1.0.0',
+			// Type of your project, same as `type` in wpackio.project.js
+			'theme',
+			// Plugin location, pass false in case of theme.
+			false
+		);
+
+		wp_enqueue_style( 'paperpress-fonts', paper_press_fonts_url(), array(), null );	
+		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . "/inc/fontawesome/css/fontawesome-all.css", array(), '5.0.12', 'screen' );
+
 		$enqueue->enqueue(
             'theme',
             'paperBlocks',
             [ 'wp-i18n', 'wp-element', 'wp-blocks', 'wp-components', 'wp-editor' ]
 		);
+
+		$enqueue->enqueue( 'theme', 'main', [] );
 	}
 
 	add_action( 'wp_enqueue_scripts', 'paperpress_enqueue' );
-	add_action( 'enqueue_block_editor_assets', 'paperpress_enqueue' );
+	add_action( 'enqueue_block_editor_assets', 'paperpress_blocks_enqueue' );
 }
 
 /**
