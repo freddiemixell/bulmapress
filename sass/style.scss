@@ -21,8 +21,8 @@ Tags: one-column, featured-images, theme-options, custom-background, custom-colo
 	font-family: 'PlatformWeb';
 	font-style: normal;
 	font-weight: 500;
-	src: url(/wp-content/themes/paper-press/inc/fonts/PlatformWeb-Medium.eot);
-	src: url(/wp-content/themes/paper-press/inc/fonts/PlatformWeb-Medium.eot?#iefix) format("embedded-opentype"),url(/wp-content/themes/paper-press/inc/fonts/PlatformWeb-Medium.woff) format("woff"),url(../fonts/PlatformWeb-Medium.ttf) format("truetype"),url(/wp-content/themes/paper-press/inc/fonts/PlatformWeb-Medium.svg#PlatformWeb) format("svg")
+	src: url(../inc/fonts/PlatformWeb-Medium.eot);
+	src: url(../inc/fonts/PlatformWeb-Medium.eot?#iefix) format("embedded-opentype"),url(../inc/fonts/PlatformWeb-Medium.woff) format("woff"),url(../inc/fonts/PlatformWeb-Medium.ttf) format("truetype")
 }
 .editor-styles-wrapper {
 	font-family: "PlatformWeb" !important;
@@ -36,16 +36,16 @@ Tags: one-column, featured-images, theme-options, custom-background, custom-colo
 @import 'variables';
 
 // Import only what you need from Bulma
-@import "../../node_modules/bulma/sass/utilities/_all.sass";
-@import "../../node_modules/bulma/sass/base/_all.sass";
-@import "../../node_modules/bulma/sass/elements/button.sass";
-@import "../../node_modules/bulma/sass/elements/container.sass";
-@import "../../node_modules/bulma/sass/grid/columns.sass";
-@import "../../node_modules/bulma/sass/elements/title.sass";
-@import "../../node_modules/bulma/sass/form/_all.sass";
-@import "../../node_modules/bulma/sass/components/navbar.sass";
-@import "../../node_modules/bulma/sass/layout/hero.sass";
-@import "../../node_modules/bulma/sass/layout/section.sass";
+@import "./node_modules/bulma/sass/utilities/_all.sass";
+@import "./node_modules/bulma/sass/base/_all.sass";
+@import "./node_modules/bulma/sass/elements/button.sass";
+@import "./node_modules/bulma/sass/elements/container.sass";
+@import "./node_modules/bulma/sass/grid/columns.sass";
+@import "./node_modules/bulma/sass/elements/title.sass";
+@import "./node_modules/bulma/sass/form/_all.sass";
+@import "./node_modules/bulma/sass/components/navbar.sass";
+@import "./node_modules/bulma/sass/layout/hero.sass";
+@import "./node_modules/bulma/sass/layout/section.sass";
 
 
 .navbar .navbar-brand img {

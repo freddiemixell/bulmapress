@@ -29,7 +29,7 @@ module.exports = {
 		{
 			name: 'theme',
 			entry: {
-				main: ['./src/theme/index.js'],
+				main: ['./js/theme/index.js'],
 				paperBlocks: [ './blocks/library/index.js' ],
 			},
 			webpackConfig: (config, merge, appDir, isDev) => {
