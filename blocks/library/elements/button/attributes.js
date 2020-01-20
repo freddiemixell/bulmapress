@@ -20,8 +20,15 @@ export default {
     italic: {
         type: "string"
     },
-    href: {
+    url: {
         type: 'string',
         default: '#'
+    },
+    target: {
+        type: 'boolean',
+        default: false,
+    },
+    buttonColor: {
+        type: 'string'
     }
 }
