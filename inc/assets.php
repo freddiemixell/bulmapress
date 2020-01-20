@@ -74,6 +74,11 @@ if ( ! function_exists( 'paperpress_enqueue' ) ) {
             'theme',
             'title',
             [ 'wp-i18n', 'wp-element', 'wp-blocks', 'wp-components', 'wp-editor' ]
+		);
+		$enqueue->enqueue(
+            'theme',
+            'subtitle',
+            [ 'wp-i18n', 'wp-element', 'wp-blocks', 'wp-components', 'wp-editor' ]
         );
 	}
 

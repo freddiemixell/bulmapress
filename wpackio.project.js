@@ -32,7 +32,8 @@ module.exports = {
 				main: ['./src/theme/index.js'],
 				hero: [ './blocks/hero/index.js' ],
 				textControls: ['./blocks/TextControls/index.js'],
-				title: [ './blocks/title/index.js' ]
+				title: [ './blocks/title/index.js' ],
+				subtitle: [ './blocks/subtitle/index.js' ],
 			},
 			webpackConfig: (config, merge, appDir, isDev) => {
 				const svgoLoader = {

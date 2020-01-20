@@ -3,16 +3,17 @@
   "main.css": "theme/main.css",
   "main.js": "theme/main.js",
   "runtime.js": "theme/runtime.js",
+  "subtitle.js": "theme/subtitle.js",
   "textControls.js": "theme/textControls.js",
   "theme/assets/PlatformWeb-Medium.ttf": "theme/assets/PlatformWeb-Medium-5abdb50e.ttf",
   "title.js": "theme/title.js",
-  "vendors~hero~main~textControls~title.js": "theme/vendors~hero~main~textControls~title.js",
+  "vendors~hero~main~subtitle~textControls~title.js": "theme/vendors~hero~main~subtitle~textControls~title.js",
   "vendors~main.js": "theme/vendors~main.js",
   "wpackioEp": {
     "main": {
       "js": [
         "theme/runtime.js",
-        "theme/vendors~hero~main~textControls~title.js",
+        "theme/vendors~hero~main~subtitle~textControls~title.js",
         "theme/vendors~main.js",
         "theme/main.js"
       ],
@@ -23,22 +24,29 @@
     "hero": {
       "js": [
         "theme/runtime.js",
-        "theme/vendors~hero~main~textControls~title.js",
+        "theme/vendors~hero~main~subtitle~textControls~title.js",
         "theme/hero.js"
       ]
     },
     "textControls": {
       "js": [
         "theme/runtime.js",
-        "theme/vendors~hero~main~textControls~title.js",
+        "theme/vendors~hero~main~subtitle~textControls~title.js",
         "theme/textControls.js"
       ]
     },
     "title": {
       "js": [
         "theme/runtime.js",
-        "theme/vendors~hero~main~textControls~title.js",
+        "theme/vendors~hero~main~subtitle~textControls~title.js",
         "theme/title.js"
+      ]
+    },
+    "subtitle": {
+      "js": [
+        "theme/runtime.js",
+        "theme/vendors~hero~main~subtitle~textControls~title.js",
+        "theme/subtitle.js"
       ]
     }
   }
