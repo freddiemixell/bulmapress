@@ -1,6 +1,5 @@
 import FontSizePicker from '../../../editor/textcontrols/textsize';
 import TextTransform from '../../../editor/textcontrols/texttransform';
-import TextStyle from '../../../editor/textcontrols/textstyle';
 import TextColor from '../../../editor/textcontrols/textcolor';
 
 const { __ } = wp.i18n;
@@ -21,7 +20,6 @@ const Inspector = ( props ) => {
         />
         <FontSizePicker {...{ setAttributes, ...props }} />
         <TextTransform {...{ setAttributes, ...props }} />
-        <TextStyle {...{ setAttributes, ...props }} />
       </PanelBody>
     </InspectorControls>
   );

@@ -1,4 +1,3 @@
-import AlignToolbar from '../../../editor/textcontrols/textalign';
 import TextWeightToolbar from '../../../editor/textcontrols/textweight';
 
 const { __ } = wp.i18n;
@@ -11,20 +10,12 @@ export default class Controls extends Component {
         super( ...arguments );
     }
     render() {
-        const { attributes: { alignment, weight }, setAttributes } = this.props;
-        const onChangeAlign = alignment => {
-            setAttributes( { alignment } )
-        }
+        const { attributes: { weight }, setAttributes } = this.props;
         const onChangeWeight = weight => {
             setAttributes( { weight } )
         }
         return (
             <BlockControls>
-                <AlignToolbar
-                    value={ alignment }
-                    onChange={ onChangeAlign }
-                    withJustify={ false }
-                />
                 <TextWeightToolbar
                     value={ weight }
                     onChange={ onChangeWeight }
