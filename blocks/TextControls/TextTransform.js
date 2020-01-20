@@ -6,7 +6,6 @@ const options = [
     { label: "Capitalized", value: "paperpress-is-capitalized" },
     { label: "Lowercase", value: "paperpress-is-lowercase" },
     { label: "Uppercase", value: "paperpress-is-uppercase" },
-    { label: "Italic", value: "paperpress-is-italic" },
 ];
 
 export default function TextTransform( props ) {
