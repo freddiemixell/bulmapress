@@ -8,7 +8,7 @@ module.exports = {
 		require('autoprefixer'),
 		require('postcss-prefixer')({
 			prefix: 'paperpress-',
-			ignore: ['.admin-bar']
+			ignore: ['.admin-bar', '.editor-styles-wrapper']
 		})
 	],
 };
