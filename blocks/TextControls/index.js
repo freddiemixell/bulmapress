@@ -1,2 +1,2 @@
-import './TextColor';
+import './InlineTextColor';
 import './RemoveFormat';
