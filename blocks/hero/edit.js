@@ -1,13 +1,12 @@
 import Inspector from './Inspector';
 import icons from './icons';
 
-const { RichText, MediaUpload, InnerBlocks } = wp.blockEditor;
+const { MediaUpload, InnerBlocks } = wp.blockEditor;
 const { Button } = wp.components;
 const { __ } = wp.i18n;
 
 const edit = props => {
-    const { attributes: { subtitle, imgID, imgURL, imgAlt, heroSubTextAlign }, setAttributes, isSelected } = props;
-    const onChangeSubtitle = subtitle => { setAttributes( { subtitle } ) };
+    const { attributes: { imgID, imgURL, imgAlt }, setAttributes, isSelected } = props;
     const onSelectImage = img => {
         setAttributes( {
             imgID: img.id,
@@ -31,16 +30,12 @@ const edit = props => {
                         <div className="paperpress-column">
                             <div>
                                 <InnerBlocks
-                                    allowedBlocks={ [ 'paperblocks/title' ] }
-                                    template={ [[ 'paperblocks/title', { textContent: 'Placeholder' } ]] }
+                                    allowedBlocks={ [ 'paperblocks/title', 'paperblocks/subtitle' ] }
+                                    template={ [
+                                        [ 'paperblocks/title', { textContent: 'Hero Title', textSize: 'paperpress-is-size-1' } ],
+                                        [ 'paperblocks/subtitle', { textContent: 'Hero subtitle.' } ],
+                                    ] }
                                     templateLock="all"
-                                />
-                                <RichText
-                                    tagName="p"
-                                    className={ `paperpress-subtitle ${ heroSubTextAlign }` }
-                                    placeholder="Hero subtitle goes here."
-                                    onChange={ onChangeSubtitle }
-                                    value={ subtitle }
                                 />
                                 <div className="paperpress-buttons">
                                     <button className="paperpress-button paperpress-is-primary">
