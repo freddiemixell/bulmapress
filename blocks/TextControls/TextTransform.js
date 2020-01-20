@@ -1,4 +1,6 @@
-const { SelectControl } = wp.components;
+import Picker from '../Controls/Picker';
+import PanelSection from '../Controls/PanelSection';
+
 const { __ } = wp.i18n;
 
 const options = [
@@ -10,17 +12,14 @@ const options = [
 
 export default function TextTransform( props ) {
     const {
-        attributes: {
-            transform
-        },
         setAttributes,
     } = props;
     return (
-        <SelectControl
-            label={ __( 'Transform' ) }
-            options={ options }
-            value={ transform }
-            onChange={ transform => setAttributes( { transform } ) }
-        />
+        <PanelSection label={ __( 'Transform', 'paper-blocks' ) }>
+            <Picker
+                options={ options }
+                onChange={ transform => setAttributes( { transform } ) }
+            />
+        </PanelSection>
     );
 }

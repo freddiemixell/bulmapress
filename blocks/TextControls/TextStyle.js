@@ -1,3 +1,5 @@
+import PanelSection from '../Controls/PanelSection';
+
 const { Button } = wp.components;
 const { __ } = wp.i18n;
 
@@ -10,9 +12,8 @@ const TextStyle = ( {
     },
 } ) => {
     return (
-        <div style={{marginBottom: '19.5px'}}>
-            <p style={{paddingBottom: '13px'}}>{ __( 'Text Style' ) }</p>
-            <div className="components-toolbar">
+        <PanelSection label={ __( 'Text Style', 'paper-blocks' ) }>
+            <div style={{margin: 0, border: '1px solid #e2e4e7', backgroundColor: '#fff', display: 'flex', justifyContent: 'space-between', flexShrink: 0}}>
                 <Button
                     icon='editor-italic'
                     label='italic'
@@ -59,7 +60,7 @@ const TextStyle = ( {
                     }}
                 />
             </div>
-        </div>
+        </PanelSection>
     )
 }
 

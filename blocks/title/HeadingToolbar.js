@@ -1,18 +1,10 @@
-/**
- * External dependencies
- */
-const { range } = lodash;
+import PanelSection from '../Controls/PanelSection';
 
-/**
- * WordPress dependencies
- */
+const { range } = lodash;
 const { __, sprintf } = wp.i18n;
 const { Component } = wp.element;
 const { ToolbarGroup } = wp.components;
 
-/**
- * Internal dependencies
- */
 import HeadingLevelIcon from './heading-level-icon';
 
 class HeadingToolbar extends Component {
@@ -30,14 +22,28 @@ class HeadingToolbar extends Component {
 	render() {
 		const { isCollapsed = true, minLevel, maxLevel, selectedLevel, onChange } = this.props;
 
-		return (
+		return ! isCollapsed ? (
+			<PanelSection label={ __( 'Level', 'paper-blocks' ) }>
+				<ToolbarGroup
+					className="paperpress-is-marginless"
+					isCollapsed={ isCollapsed }
+					icon={ <HeadingLevelIcon level={ selectedLevel } /> }
+					controls={ range( minLevel, maxLevel ).map(
+						( index ) => this.createLevelControl( index, selectedLevel, onChange )
+					) }
+				/>
+			</PanelSection>
+		) :
+		(
 			<ToolbarGroup
+				className="paperpress-is-marginless"
 				isCollapsed={ isCollapsed }
 				icon={ <HeadingLevelIcon level={ selectedLevel } /> }
 				controls={ range( minLevel, maxLevel ).map(
 					( index ) => this.createLevelControl( index, selectedLevel, onChange )
-				) } />
-		);
+				) }
+			/>
+		)
 	}
 }
 
