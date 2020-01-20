@@ -1,4 +1,4 @@
-import { getClassNames, inlineStyles } from './helpers';
+import { getClassNames, inlineStyles } from '../TextControls/helpers';
 
 const { RichText } = wp.blockEditor;
 
