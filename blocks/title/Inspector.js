@@ -14,6 +14,7 @@ const {
 
 import HeadingToolbar from './HeadingToolbar';
 import FontSizePicker from '../TextControls/FontSizePicker';
+import TextTransform from '../TextControls/TextTransform';
 
 /**
  * Create an Inspector Controls wrapper Component
@@ -50,6 +51,7 @@ export default class Inspector extends Component {
                     }}
                 />
                 <FontSizePicker {...{ setAttributes, ...this.props }} />
+                <TextTransform {...{ setAttributes, ...this.props }} />
         </PanelBody>
       </InspectorControls>
     );
