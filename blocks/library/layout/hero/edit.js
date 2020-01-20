@@ -34,17 +34,12 @@ const edit = props => {
                                     template={ [
                                         [ 'paperblocks/title', { textContent: 'Hero Title', textSize: 'paperpress-is-size-1' } ],
                                         [ 'paperblocks/subtitle', { textContent: 'Hero subtitle.' } ],
+                                        [ 'paperblocks/buttons', {}, [
+                                            [ 'paperblocks/button', { textContent: 'Get Started' } ],
+                                        ] ]
                                     ] }
                                     templateLock="all"
                                 />
-                                <div className="paperpress-buttons">
-                                    <button className="paperpress-button paperpress-is-primary">
-                                    <span>Get Started</span>
-                                        <span className="paperpress-icon">
-                                        <i className="fas fa-arrow-right"></i>
-                                        </span>
-                                    </button>
-                                </div>
                             </div>
                         </div>
                         <div className="paperpress-column">
