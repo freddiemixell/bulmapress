@@ -5,6 +5,9 @@
  * @package Paper Press
  */
 
+// Webpack enqueue class.
+require_once __DIR__ . '/inc/enqueue.php';
+
 // Asset enqueue - css, js, fonts.
 require_once __DIR__ . '/inc/assets.php';
 

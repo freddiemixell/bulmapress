@@ -6,12 +6,10 @@
  * @package WPackio\Enqueue
  */
 
-namespace WPackio;
-
 /**
  * The primary API class for enqueuing assets using WordPress APIs.
  */
-class Enqueue {
+class WebpackEnqueue {
 	/**
 	 * Output path relative to the root of this plugin/theme.
 	 *
