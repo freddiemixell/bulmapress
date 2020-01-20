@@ -35,30 +35,30 @@ export default {
         type: 'string',
     },
     isPrimary: {
-        type: 'string',
+        type: 'boolean',
     },
     isOutlined: {
-        type: 'string',
+        type: 'boolean',
     },
     isLink: {
-        type: 'string',
+        type: 'boolean',
     },
     isInfo: {
-        type: 'string',
+        type: 'boolean',
     },
     isPrimary: {
-        type: 'string',
+        type: 'boolean',
     },
     isSuccess: {
-        type: 'string',
+        type: 'boolean',
     },
     isDanger: {
-        type: 'string',
+        type: 'boolean',
     },
     isInverted: {
-        type: 'string',
+        type: 'boolean',
     },
     isRounded: {
-        type: 'string',
+        type: 'boolean',
     },
 }
