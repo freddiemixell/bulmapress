@@ -1,9 +1,19 @@
+import styled from 'styled-components';
+
+const PanelWrapper = styled.div`
+    margin-bottom: 19.5px;
+
+    p {
+        margin-bottom: 13px;
+    }
+`;
+
 const PanelSection = ( { label, children } ) => {
     return (
-        <div style={{marginBottom: '19.5px'}}>
-            <p style={{marginBottom: '13px'}}>{ label }</p>
+        <PanelWrapper>
+            <p>{ label }</p>
             { children }
-        </div>
+        </PanelWrapper>
     );
 }
 
