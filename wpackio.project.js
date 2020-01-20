@@ -1,10 +1,8 @@
 const pkg = require('./package.json');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {
 	getFileLoaderOptions,
 	issuerForNonStyleFiles,
 	issuerForStyleFiles,
-	babelLoader,
 	fileLoader,
 } = require('@wpackio/scripts');
 
@@ -24,6 +22,11 @@ module.exports = {
 			'This software is released under the UNLICENSED License\nhttps://opensource.org/licenses/UNLICENSED',
 		credit: true,
 	},
+	// Hook into babeloverride so that we can add react-hot-loader plugin
+	jsBabelOverride: defaults => ({
+		...defaults,
+		"plugins": ["babel-plugin-styled-components"],
+	}),
 	// Files we need to compile, and where to put
 	files: [
 		{
@@ -105,6 +108,8 @@ module.exports = {
 	// <https://webpack.js.org/configuration/externals/>
 	externals: {
 		jquery: 'jQuery',
+		'react': 'React',
+    	'react-dom': 'ReactDOM',
 	},
 	// Webpack Aliases
 	// <https://webpack.js.org/configuration/resolve/#resolve-alias>
