@@ -11,8 +11,14 @@ const inlineStyles = (props) => {
     return styles;
 }
 
-const getClassNames = (props) => {
-    const { attributes: { alignment, weight, textSize, transform, italic, buttonSubset, buttonGroupMod } } = props
+const getClassNames = ( { attributes } ) => {
+    const {
+        alignment, weight, textSize,
+        transform, italic, buttonSubset,
+        buttonGroupMod, isPrimary, isOutlined,
+        isInverted, isRounded,
+    } = attributes;
+
     let classNames = [];
     if ( typeof alignment !== 'undefined' ) {
         classNames = [ ...classNames, alignment ]
@@ -34,6 +40,18 @@ const getClassNames = (props) => {
     }
     if ( typeof buttonGroupMod !== 'undefined' ) {
         classNames = [ ...classNames, buttonGroupMod ]
+    }
+    if ( typeof isPrimary !== 'undefined' ) {
+        classNames = [ ...classNames, isPrimary ]
+    }
+    if ( typeof isOutlined !== 'undefined' ) {
+        classNames = [ ...classNames, isOutlined ]
+    }
+    if ( typeof isInverted !== 'undefined' ) {
+        classNames = [ ...classNames, isInverted ]
+    }
+    if ( typeof isRounded !== 'undefined' ) {
+        classNames = [ ...classNames, isRounded ]
     }
     return classNames.join( ' ' );
 }
