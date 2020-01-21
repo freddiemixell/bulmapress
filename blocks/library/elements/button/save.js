@@ -19,7 +19,7 @@ const save = props => {
     return (
         <a
             href={ url }
-            className={ `paperpress-button paperpress-is-primary ${ classNames }` }
+            className={ `paperpress-button ${ classNames }` }
             style={ buttonStyle }
             { ...linkProps }
         >

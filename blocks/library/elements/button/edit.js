@@ -23,7 +23,7 @@ const edit = props => {
             <Controls {...{ setAttributes, ...props }} />
             <Inspector {...{ setAttributes, ...props }} />
             <button
-                className={ `paperpress-button paperpress-is-primary ${ classNames }` }
+                className={ `paperpress-button ${ classNames }` }
                 style={ buttonStyle }
             >
                 <RichText
