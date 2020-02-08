@@ -40,8 +40,7 @@ if ( ! function_exists( 'paperpress_shared_assets_enqueue' ) ) {
 	 * Enqueue assets for frontend and editor.
 	 */
 	function paperpress_shared_assets_enqueue() {
-		wp_enqueue_style( 'paperpress-fonts', paper_press_fonts_url(), array(), null );	
-		wp_enqueue_style( 'font-awesome', get_template_directory_uri() . "/inc/fontawesome/css/fontawesome-all.css", array(), '5.0.12', 'screen' );
+		wp_enqueue_style( 'paperpress-fonts', paper_press_fonts_url(), array(), null );
 	}
 
 	add_action( 'enqueue_block_assets', 'paperpress_shared_assets_enqueue' );
