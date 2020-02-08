@@ -1,34 +1,52 @@
 {
-  "main.css": "theme/main.css",
-  "main.js": "theme/main.js",
-  "paperBlocks.css": "theme/paperBlocks.css",
-  "paperBlocks.js": "theme/paperBlocks.js",
-  "runtime.js": "theme/runtime.js",
+  "main.css": "theme/main-27ed5a89.css",
+  "main.css.map": "theme/main-27ed5a89.css.map",
+  "main.js": "theme/main-8d42411c.js",
+  "main.js.map": "theme/main-8d42411c.js.map",
+  "paperBlocks.css": "theme/paperBlocks-ec993d21.css",
+  "paperBlocks.css.map": "theme/paperBlocks-ec993d21.css.map",
+  "paperBlocks.js": "theme/paperBlocks-bfcf795c.js",
+  "paperBlocks.js.map": "theme/paperBlocks-bfcf795c.js.map",
+  "runtime.js": "theme/runtime-d66e3a9f.js",
+  "runtime.js.map": "theme/runtime-d66e3a9f.js.map",
   "theme/assets/PlatformWeb-Medium.eot": "theme/assets/PlatformWeb-Medium-3ce8f0c9.eot",
   "theme/assets/PlatformWeb-Medium.ttf": "theme/assets/PlatformWeb-Medium-5abdb50e.ttf",
   "theme/assets/PlatformWeb-Medium.woff": "theme/assets/PlatformWeb-Medium-e2a90668.woff",
-  "vendors~main~paperBlocks.js": "theme/vendors~main~paperBlocks.js",
-  "vendors~paperBlocks.js": "theme/vendors~paperBlocks.js",
+  "vendors~paperBlocks.js": "theme/vendors~paperBlocks-ed9437d6.js",
+  "vendors~paperBlocks.js.map": "theme/vendors~paperBlocks-ed9437d6.js.map",
   "wpackioEp": {
     "main": {
       "js": [
-        "theme/runtime.js",
-        "theme/vendors~main~paperBlocks.js",
-        "theme/main.js"
+        "theme/runtime-d66e3a9f.js",
+        "theme/main-8d42411c.js"
+      ],
+      "js.map": [
+        "theme/runtime-d66e3a9f.js.map",
+        "theme/main-8d42411c.js.map"
       ],
       "css": [
-        "theme/main.css"
+        "theme/main-27ed5a89.css"
+      ],
+      "css.map": [
+        "theme/main-27ed5a89.css.map"
       ]
     },
     "paperBlocks": {
       "js": [
-        "theme/runtime.js",
-        "theme/vendors~main~paperBlocks.js",
-        "theme/vendors~paperBlocks.js",
-        "theme/paperBlocks.js"
+        "theme/runtime-d66e3a9f.js",
+        "theme/vendors~paperBlocks-ed9437d6.js",
+        "theme/paperBlocks-bfcf795c.js"
+      ],
+      "js.map": [
+        "theme/runtime-d66e3a9f.js.map",
+        "theme/vendors~paperBlocks-ed9437d6.js.map",
+        "theme/paperBlocks-bfcf795c.js.map"
       ],
       "css": [
-        "theme/paperBlocks.css"
+        "theme/paperBlocks-ec993d21.css"
+      ],
+      "css.map": [
+        "theme/paperBlocks-ec993d21.css.map"
       ]
     }
   }
