@@ -1,7 +1,8 @@
 import { getClassNames, inlineStyles } from '../../../editor/textcontrols/helpers';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const save = props => {
-    const { textContent, buttonColor, url, target } = props.attributes;
+    const { textContent, buttonColor, url, target, icon } = props.attributes;
     const classNames = getClassNames( props );
     const style = inlineStyles( props );
     const buttonStyle = {}
@@ -24,9 +25,13 @@ const save = props => {
             { ...linkProps }
         >
             <span style={ style }>{ textContent }</span>
-            <span className="paperpress-icon">
-                <i className="fas fa-arrow-right"></i>
-            </span>
+            {
+                typeof icon !== 'undefined' ?
+                <span className="paperpress-icon">
+                    <FontAwesomeIcon size="20px" icon={ icon } />
+                </span> :
+                null
+            }
         </a>
     );
 }

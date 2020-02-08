@@ -46,4 +46,7 @@ export default {
     isRounded: {
         type: 'string',
     },
+    icon: {
+        type: 'object',
+    }
 }

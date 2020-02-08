@@ -1,5 +1,4 @@
 import PanelSection from '../components/panelsection';
-import Picker from '../components/picker';
 
 const { __ } = wp.i18n;
 const { CheckboxControl } = wp.components;

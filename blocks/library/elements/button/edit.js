@@ -1,6 +1,7 @@
 import { getClassNames, inlineStyles } from '../../../editor/textcontrols/helpers';
 import Inspector from './inspector';
 import Controls from './controls';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const { Fragment } = wp.element;
 const { RichText } = wp.blockEditor;
@@ -8,7 +9,7 @@ const { RichText } = wp.blockEditor;
 const allowedFormats = [ 'paperblocks/color', 'paperblocks/background-color' ];
 
 const edit = props => {
-    const { attributes: { textContent, buttonColor }, setAttributes } = props;
+    const { attributes: { textContent, buttonColor, icon }, setAttributes } = props;
     const onChangeText = textContent => { setAttributes( { textContent } ) };
     const classNames = getClassNames( props );
     const style = inlineStyles( props );
@@ -34,9 +35,13 @@ const edit = props => {
                     allowedFormats={ allowedFormats }
                     style={ style }
                 />
-                <span className="paperpress-icon">
-                    <i className="fas fa-arrow-right"></i>
-                </span>
+                {
+                    typeof icon !== 'undefined' ?
+                    <span className="paperpress-icon">
+                        <FontAwesomeIcon icon={ icon } />
+                    </span> :
+                    null
+                }
             </button>
         </Fragment>
     )
