@@ -25,4 +25,14 @@ require_once __DIR__ . '/inc/jetpack.php';
 
 // Theme mods.
 require_once __DIR__ . '/inc/theme-mods.php';
-add_editor_style('editor-style.css');
+
+add_filter( 'block_editor_settings' , 'remove_guten_wrapper_styles' );
+function remove_guten_wrapper_styles( $settings ) {
+    unset($settings['styles']);
+
+    return $settings;
+}
+
+add_action( 'admin_head', function() {
+    echo '<style>.editor-post-title { display: none !important; } .edit-post-visual-editor { padding-top: 5px !important; }</style>';
+} );
