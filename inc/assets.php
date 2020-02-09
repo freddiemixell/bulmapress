@@ -65,6 +65,8 @@ if ( ! function_exists( 'paperpress_frontend_assets_enqueue' ) ) {
 		);
 
 		$enqueue->enqueue( 'theme', 'main', [] );
+
+		wp_enqueue_style( 'font-awesome-css', get_template_directory_uri() . '/inc/fontawesome/css/fontawesome-all.css', [], time(), 'all'  );
 	}
 
 	add_action( 'wp_enqueue_scripts', 'paperpress_frontend_assets_enqueue' );
