@@ -14,10 +14,6 @@ module.exports = {
 	// Your WordPress development server address
 	// This is super important
 	proxy: 'https://atomic.test',
-	https: {
-		key: '/Users/freddiemixell/Sites/atomic/wp-content/themes/paper-press/paper-dev/dev.paperplane.co.key',
-		cert: '/Users/freddiemixell/Sites/atomic/wp-content/themes/paper-press/paper-dev/dev.paperplane.co.crt',
-	},
 	// PORT on your localhost where you would want live server to hook
 	port: 3000,
 	// UI passed directly to browsersync
