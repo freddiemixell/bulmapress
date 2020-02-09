@@ -28,7 +28,7 @@ const save = props => {
             {
                 typeof icon !== 'undefined' ?
                 <span className="paperpress-icon">
-                    <FontAwesomeIcon size="20px" icon={ icon } />
+                    <FontAwesomeIcon icon={ icon } />
                 </span> :
                 null
             }
