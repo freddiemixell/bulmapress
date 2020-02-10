@@ -3,7 +3,7 @@
  * Jetpack Compatibility File
  * See: http://jetpack.me/
  *
- * @package Paper Press
+ * @package BulmaPress
  */
 
 /**
@@ -59,7 +59,7 @@ function paper_press_render_infinite_posts() {
  * Changes the text of the "Older posts" button in infinite scroll
  */
 function paper_press_infinite_scroll_button_text( $js_settings ) {
-	$js_settings['text'] = esc_html__( 'Load more', 'paper-press' );
+	$js_settings['text'] = esc_html__( 'Load more', 'bulma-press' );
 	return $js_settings;
 }
 add_filter( 'infinite_scroll_js_settings', 'paper_press_infinite_scroll_button_text' );

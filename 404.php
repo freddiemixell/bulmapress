@@ -2,7 +2,7 @@
 /**
  * The template for displaying 404 pages (Not Found).
  *
- * @package Paper Press
+ * @package BulmaPress
  */
 
 get_header(); ?>
@@ -11,7 +11,7 @@ get_header(); ?>
 		<main id="main" class="site-main">
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<div class="entry-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Please use the search box to locate the content you were looking for.', 'paper-press' ); ?></p>
+					<p><?php esc_html_e( 'It looks like nothing was found at this location. Please use the search box to locate the content you were looking for.', 'bulma-press' ); ?></p>
 
 					<?php get_search_form(); ?>
 				</div><!-- .entry-content -->

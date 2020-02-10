@@ -2,7 +2,7 @@
 /**
  * Enqueue Assets
  *
- * @package Paper Press
+ * @package BulmaPress
  */
 
 if ( ! function_exists( 'paperpress_block_editor_assets_enqueue' ) ) {
@@ -13,7 +13,7 @@ if ( ! function_exists( 'paperpress_block_editor_assets_enqueue' ) ) {
 	function paperpress_block_editor_assets_enqueue( $enqueue ) {
 		$enqueue = new WebpackEnqueue(
 			// Name of the project, same as `appName` in wpackio.project.js
-			'paperPress',
+			'bulmaPress',
 			// Output directory, same as `outputPath` in wpackio.project.js
 			'dist',
 			// Version of your plugin
@@ -53,7 +53,7 @@ if ( ! function_exists( 'paperpress_frontend_assets_enqueue' ) ) {
 	function paperpress_frontend_assets_enqueue() {
 		$enqueue = new WebpackEnqueue(
 			// Name of the project, same as `appName` in wpackio.project.js
-			'paperPress',
+			'bulmaPress',
 			// Output directory, same as `outputPath` in wpackio.project.js
 			'dist',
 			// Version of your plugin
@@ -85,14 +85,14 @@ if ( ! function_exists( 'paper_press_fonts_url' ) ) :
 		*/
 		$font_style = get_theme_mod( 'paper_press_font_style', 'sans' );
 		if ( $font_style == 'serif' ) {
-			$frank = esc_html_x( 'on', 'Frank Ruhl Libre font: on or off', 'paper-press' );
+			$frank = esc_html_x( 'on', 'Frank Ruhl Libre font: on or off', 'bulma-press' );
 			if ( 'off' !== $frank ) {
 				$font_families = array();
 				if ( 'off' !== $frank )
 					$font_families[] = 'Frank Ruhl Libre:400,700';
 			}
 		} else {
-			$roboto_mono = esc_html_x( 'on', 'Roboto Mono font: on or off', 'paper-press' );
+			$roboto_mono = esc_html_x( 'on', 'Roboto Mono font: on or off', 'bulma-press' );
 			if ( 'off' !== $roboto_mono ) {
 				$font_families = array();
 				if ( 'off' !== $roboto_mono )

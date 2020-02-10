@@ -1,4 +1,4 @@
-=== Paper Press ===
+=== BulmaPress ===
 Contributors: arrayhq
 Donate link: https://paperplaneco.com/
 Tags: one-column, featured-images, theme-options, custom-background, custom-colors, custom-menu, editor-style, translation-ready, footer-widgets, full-width-template, blog, gutenberg
@@ -8,16 +8,16 @@ Stable tag: 1.2.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A beautifully-simple yet powerful WordPress theme that integrates perfectly with the new Gutenberg editor and the Paper Press plugin. Start building amazing websites with the new WordPress editor today! Paper Press comes with theme options to customize your font style, body and title font sizes, content width and more! Install the Paper Press plugin (paperplaneco.com) to add even more page-building blocks such as testimonials, sharing icons, notices, call to actions, buttons and more. Theme Demo: https://paperplaneco.com/demo
+A beautifully-simple yet powerful WordPress theme that integrates perfectly with the new Gutenberg editor and the BulmaPress plugin. Start building amazing websites with the new WordPress editor today! BulmaPress comes with theme options to customize your font style, body and title font sizes, content width and more! Install the BulmaPress plugin (paperplaneco.com) to add even more page-building blocks such as testimonials, sharing icons, notices, call to actions, buttons and more. Theme Demo: https://paperplaneco.com/demo
 
 == Description ==
 
-A beautifully-simple yet powerful WordPress theme that integrates perfectly with the new Gutenberg editor and the Paper Press plugin. Start building amazing websites with the new WordPress editor today! Paper Press comes with theme options to customize your font style, body and title font sizes, content width and more! Install the Paper Press plugin (paperplaneco.com) to add even more page-building blocks such as testimonials, sharing icons, notices, call to actions, buttons and more. Theme Demo: https://paperplaneco.com/demo
+A beautifully-simple yet powerful WordPress theme that integrates perfectly with the new Gutenberg editor and the BulmaPress plugin. Start building amazing websites with the new WordPress editor today! BulmaPress comes with theme options to customize your font style, body and title font sizes, content width and more! Install the BulmaPress plugin (paperplaneco.com) to add even more page-building blocks such as testimonials, sharing icons, notices, call to actions, buttons and more. Theme Demo: https://paperplaneco.com/demo
 
 == Copyright ==
 
-Paper Press WordPress Theme, Copyright 2018 Array Themes
-Paper Press is distributed under the terms of the GNU GPL
+BulmaPress WordPress Theme, Copyright 2018 Array Themes
+BulmaPress is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -29,7 +29,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Paper Press bundles the following third-party resources:
+BulmaPress bundles the following third-party resources:
 
 Fitvids, Copyright Chris Coyier and Paravel
 Licenses: GNU GPL
@@ -133,11 +133,11 @@ Source: https://pixabay.com/en/girl-person-walking-footbridge-918706/
 = 1.0.3 - 4/18/18 =
 * Add prefixes to styles in Getting Started page.
 * Improve plugin install links in Getting Started page.
-* Change folder name back to paper-press-theme.
+* Change folder name back to bulma-press-theme.
 
 = 1.0.2 - 4/15/18 =
 * Fix redirect to Getting Started page.
-* Change folder name to paper-press.
+* Change folder name to bulma-press.
 
 = 1.0.1 - 3/12/18 =
 * Fix width of title in Gutenberg editor styles.

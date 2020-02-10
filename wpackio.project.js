@@ -8,12 +8,12 @@ const {
 
 module.exports = {
 	// Project Identity
-	appName: 'paperPress', // Unique name of your project
+	appName: 'bulmaPress', // Unique name of your project
 	type: 'theme', // Plugin or theme
-	slug: 'paper-press', // Plugin or Theme slug, basically the directory name under `wp-content/<themes|plugins>`
+	slug: 'bulma-press', // Plugin or Theme slug, basically the directory name under `wp-content/<themes|plugins>`
 	// Used to generate banners on top of compiled stuff
 	bannerConfig: {
-		name: 'paperPress',
+		name: 'bulmaPress',
 		author: '',
 		license: 'UNLICENSED',
 		link: 'UNLICENSED',

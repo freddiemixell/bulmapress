@@ -2,7 +2,7 @@
 /**
  * The template for displaying Search results.
  *
- * @package Paper Press
+ * @package BulmaPress
  */
 
 get_header(); ?>
@@ -20,7 +20,7 @@ get_header(); ?>
 				endwhile;
 
 				else : ?>
-					<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'paper-press' ); ?></p>
+					<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'bulma-press' ); ?></p>
 				<?php endif;
 			?>
 		</div>

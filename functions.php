@@ -1,8 +1,8 @@
 <?php
 /**
- * Paper Press functions and definitions
+ * BulmaPress functions and definitions
  *
- * @package Paper Press
+ * @package BulmaPress
  */
 
 // Webpack enqueue class.
@@ -17,7 +17,7 @@ require_once __DIR__ .'/inc/theme-setup.php';
 // Widgets areas.
 require_once __DIR__ . '/inc/widgets.php';
 
-// Custom template tags for Paper Press.
+// Custom template tags for BulmaPress.
 require_once __DIR__ . '/inc/template-tags.php';
 
 // Load Jetpack compatibility file.

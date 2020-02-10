@@ -2,7 +2,7 @@
 /**
  * The template used for displaying search results
  *
- * @package Paper Press
+ * @package BulmaPress
  */
 ?>
 

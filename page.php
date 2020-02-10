@@ -2,7 +2,7 @@
 /**
  * The template for displaying default pages.
  *
- * @package Paper Press
+ * @package BulmaPress
  */
 
 get_header(); ?>

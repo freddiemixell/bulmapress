@@ -2,18 +2,18 @@
 /**
  * Theme Setup
  *
- * @package Paper Press
+ * @package BulmaPress
  */
 
 if ( ! function_exists( 'paper_press_setup' ) ) :
     /**
-     * Sets up Paper Press's defaults and registers support for various WordPress features
+     * Sets up BulmaPress's defaults and registers support for various WordPress features
      */
     function paper_press_setup() {
         /*
          * Make theme available for translation
          */
-        load_theme_textdomain( 'paper-press', get_template_directory() . '/languages' );
+        load_theme_textdomain( 'bulma-press', get_template_directory() . '/languages' );
     
         /**
          * Add default posts and comments RSS feed links to head
@@ -54,20 +54,20 @@ if ( ! function_exists( 'paper_press_setup' ) ) :
         add_theme_support( 'customize-selective-refresh-widgets' );
     
         // Featured image
-        add_image_size( 'paper-press-featured-image', 1200 );
+        add_image_size( 'bulma-press-featured-image', 1200 );
     
         // Wide featured image
-        add_image_size( 'paper-press-featured-image-wide', 1400 );
+        add_image_size( 'bulma-press-featured-image-wide', 1400 );
     
         // Logo size
-        add_image_size( 'paper-press-logo', 300 );
+        add_image_size( 'bulma-press-logo', 300 );
     
         /**
          * Register Navigation menu
          */
         register_nav_menus( array(
-            'primary' => esc_html__( 'Primary Menu', 'paper-press' ),
-            'social'  => esc_html__( 'Social Icon Menu', 'paper-press' ),
+            'primary' => esc_html__( 'Primary Menu', 'bulma-press' ),
+            'social'  => esc_html__( 'Social Icon Menu', 'bulma-press' ),
         ) );
     
         /**
@@ -75,7 +75,7 @@ if ( ! function_exists( 'paper_press_setup' ) ) :
          */
         add_theme_support( 'custom-logo', array(
             'header-text' => array( 'titles-wrap' ),
-            'size'        => 'paper-press-logo',
+            'size'        => 'bulma-press-logo',
         ) );
     
         /**
@@ -89,32 +89,32 @@ if ( ! function_exists( 'paper_press_setup' ) ) :
         // Color Palette
         add_theme_support( 'editor-color-palette', array(
             [
-                'name'  => __( 'Primary', 'paper-press' ),
+                'name'  => __( 'Primary', 'bulma-press' ),
                 'slug'  => 'primary',
                 'color' => '#57c9fc',
             ],
             [
-                'name'  => __( 'Secondary', 'paper-press' ),
+                'name'  => __( 'Secondary', 'bulma-press' ),
                 'slug'  => 'secondary',
                 'color' => '#54f2a2',
             ],
             [
-                'name'  => __( 'Accent', 'paper-press' ),
+                'name'  => __( 'Accent', 'bulma-press' ),
                 'slug'  => 'accent',
                 'color' => '#5de0e6'
             ],
             [
-                'name'  => __( 'Foreground', 'paper-press' ),
+                'name'  => __( 'Foreground', 'bulma-press' ),
                 'slug'  => 'foreground',
                 'color' => '#55f2a2',
             ],
             [
-                'name'  => __( 'Background', 'paper-press' ),
+                'name'  => __( 'Background', 'bulma-press' ),
                 'slug'  => 'background',
                 'color' => '#8ed1fc',
             ],
             [
-                'name'  => __( 'Text', 'paper-press' ),
+                'name'  => __( 'Text', 'bulma-press' ),
                 'slug'  => 'text-color',
                 'color' => '#444',
             ]

@@ -2,7 +2,7 @@
 /**
  * The main template file.
  *
- * @package Paper Press
+ * @package BulmaPress
  */
 
 get_header(); ?>

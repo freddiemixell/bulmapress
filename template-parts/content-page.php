@@ -2,7 +2,7 @@
 /**
  * The template used for displaying page content in page.php
  *
- * @package Paper Press
+ * @package BulmaPress
  */
 ?>
 
@@ -17,7 +17,7 @@
 
 		<?php if ( has_post_thumbnail() ) { ?>
 			<div class="featured-image">
-				<?php the_post_thumbnail( 'paper-press-featured-image' ); ?>
+				<?php the_post_thumbnail( 'bulma-press-featured-image' ); ?>
 			</div>
 		<?php } ?>
 
@@ -25,11 +25,11 @@
 
 			<?php
 			// Get the content
-			the_content( esc_html__( 'Read More', 'paper-press' ) );
+			the_content( esc_html__( 'Read More', 'bulma-press' ) );
 
 			// Post pagination links
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'paper-press' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bulma-press' ),
 				'after'  => '</div>',
 			) );
 

@@ -2,7 +2,7 @@
 /**
  * Theme Mods.
  *
- * @package Paper Press
+ * @package BulmaPress
  */
 
 /**
@@ -89,7 +89,7 @@ function paper_press_filter_footer_text() {
 		$footer_text = $footer_copy_text;
 	} else {
 		// Otherwise show the fallback theme text
-		$footer_text = sprintf( esc_html__( ' Theme by %1$s.', 'paper-press' ), '<a href="https://paperplaneco.com/" rel="nofollow">Paper Press</a>' );
+		$footer_text = sprintf( esc_html__( ' Theme by %1$s.', 'bulma-press' ), '<a href="https://paperplaneco.com/" rel="nofollow">BulmaPress</a>' );
 	}
 
 	return wp_kses_post( $footer_text );

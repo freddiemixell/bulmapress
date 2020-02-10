@@ -5,7 +5,7 @@
  * The area of the page that contains both current comments
  * and the comment form.
  *
- * @package Paper Press
+ * @package BulmaPress
  */
 
 /*
@@ -39,7 +39,7 @@
 					$comments_number = get_comments_number();
 					if ( '1' === $comments_number ) {
 						/* translators: %s: post title */
-						printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'paper-press' ), get_the_title() );
+						printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'bulma-press' ), get_the_title() );
 					} else {
 						printf(
 							/* translators: 1: number of comments, 2: post title */
@@ -48,7 +48,7 @@
 								'%1$s Replies to &ldquo;%2$s&rdquo;',
 								$comments_number,
 								'comments title',
-								'paper-press'
+								'bulma-press'
 							),
 							number_format_i18n( $comments_number ),
 							get_the_title()
@@ -71,9 +71,9 @@
 
 			<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 			<nav id="comment-nav-above" class="comment-navigation">
-				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'paper-press' ); ?></h1>
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'paper-press' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'paper-press' ) ); ?></div>
+				<h1 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'bulma-press' ); ?></h1>
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'bulma-press' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'bulma-press' ) ); ?></div>
 			</nav><!-- #comment-nav-above -->
 			<?php endif; // check for comment navigation ?>
 
@@ -83,7 +83,7 @@
 			// If comments are closed and there are comments, let's leave a little note, shall we?
 			if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 		?>
-			<p class="no-comments"><span><?php esc_html_e( 'Comments are closed.', 'paper-press' ); ?></span></p>
+			<p class="no-comments"><span><?php esc_html_e( 'Comments are closed.', 'bulma-press' ); ?></span></p>
 		<?php endif; ?>
 
 		<?php comment_form(); ?>

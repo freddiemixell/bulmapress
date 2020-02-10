@@ -2,7 +2,7 @@
 /**
  * Functions used throughout the theme
  *
- * @package Paper Press
+ * @package BulmaPress
  */
 
 
@@ -132,9 +132,9 @@ endif;
  */
 function paper_press_change_archive_title( $title ) {
     if( is_search() ) {
-		$title = sprintf( __( 'Search Results for: %s', 'paper-press' ), '<span>' . get_search_query() . '</span>' );
+		$title = sprintf( __( 'Search Results for: %s', 'bulma-press' ), '<span>' . get_search_query() . '</span>' );
     } elseif ( is_404() ) {
-		$title = _e( 'Page Not Found', 'paper-press' );
+		$title = _e( 'Page Not Found', 'bulma-press' );
 	}
 
     return $title;
@@ -158,7 +158,7 @@ function paper_press_comment( $comment, $args, $depth ) { ?>
 				    <?php comment_author_link() ?>
 				</cite>
 
-				<a class="comment-time" href="<?php echo esc_url( get_comment_link( comment_ID() ) ) ?>"><?php printf( esc_html__( '%1$s at %2$s', 'paper-press' ), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( esc_html__( '(Edit)', 'paper-press' ), '&nbsp;', '' ); ?>
+				<a class="comment-time" href="<?php echo esc_url( get_comment_link( comment_ID() ) ) ?>"><?php printf( esc_html__( '%1$s at %2$s', 'bulma-press' ), get_comment_date(),  get_comment_time() ); ?></a><?php edit_comment_link( esc_html__( '(Edit)', 'bulma-press' ), '&nbsp;', '' ); ?>
 			</div>
 
 			<div class="comment-content">
@@ -169,7 +169,7 @@ function paper_press_comment( $comment, $args, $depth ) { ?>
 			</div>
 
 			<?php if ( $comment->comment_approved == '0' ) : ?>
-				<em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'paper-press' ) ?></em>
+				<em class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'bulma-press' ) ?></em>
 			<?php endif; ?>
 		</div>
 	</div>
@@ -180,7 +180,7 @@ function paper_press_comment( $comment, $args, $depth ) { ?>
 /**
  * Displays post next/previous navigations
  *
- * @since Paper Press 1.0
+ * @since BulmaPress 1.0
  */
  if ( ! function_exists( 'paper_press_post_navs' ) ) :
  function paper_press_post_navs( $query = false ) {
@@ -189,11 +189,11 @@ function paper_press_comment( $comment, $args, $depth ) { ?>
  	$previous_post = get_previous_post();
 
  	the_post_navigation( array(
- 		'next_text' => '<span class="meta-nav-text meta-title">' . esc_html__( 'Next:', 'paper-press' ) . '</span> ' .
- 		'<span class="screen-reader-text">' . esc_html__( 'Next post:', 'paper-press' ) . '</span> ' .
+ 		'next_text' => '<span class="meta-nav-text meta-title">' . esc_html__( 'Next:', 'bulma-press' ) . '</span> ' .
+ 		'<span class="screen-reader-text">' . esc_html__( 'Next post:', 'bulma-press' ) . '</span> ' .
  		'<span class="post-title">%title</span>',
- 		'prev_text' => '<span class="meta-nav-text meta-title">' . esc_html__( 'Previous:', 'paper-press' ) . '</span> ' .
- 		'<span class="screen-reader-text">' . esc_html__( 'Previous post:', 'paper-press' ) . '</span> ' .
+ 		'prev_text' => '<span class="meta-nav-text meta-title">' . esc_html__( 'Previous:', 'bulma-press' ) . '</span> ' .
+ 		'<span class="screen-reader-text">' . esc_html__( 'Previous post:', 'bulma-press' ) . '</span> ' .
  		'<span class="post-title">%title</span>',
  	) );
  } endif;
@@ -212,14 +212,14 @@ function paper_press_author_box() {
 	?>
 	<div class="author-profile">
 
-		<a class="author-profile-avatar" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( sprintf( esc_html__( 'Posts by %s', 'paper-press' ), get_the_author() ) ); ?>"><?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'paper_press_author_bio_avatar_size', 65 ) ); ?></a>
+		<a class="author-profile-avatar" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" title="<?php echo esc_attr( sprintf( esc_html__( 'Posts by %s', 'bulma-press' ), get_the_author() ) ); ?>"><?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'paper_press_author_bio_avatar_size', 65 ) ); ?></a>
 
 		<div class="author-profile-info">
 			<h3 class="author-profile-title">
 				<?php if ( is_archive() ) { ?>
-					<?php echo esc_html( sprintf( esc_html__( 'All posts by %s', 'paper-press' ), get_the_author() ) ); ?>
+					<?php echo esc_html( sprintf( esc_html__( 'All posts by %s', 'bulma-press' ), get_the_author() ) ); ?>
 				<?php } else { ?>
-					<?php echo esc_html( sprintf( esc_html__( 'Posted by %s', 'paper-press' ), get_the_author() ) ); ?>
+					<?php echo esc_html( sprintf( esc_html__( 'Posted by %s', 'bulma-press' ), get_the_author() ) ); ?>
 				<?php } ?>
 			</h3>
 
@@ -228,10 +228,10 @@ function paper_press_author_box() {
 			</div>
 
 			<div class="author-profile-links">
-				<a href="<?php echo esc_url( get_author_posts_url( $author->ID ) ); ?>"><i class="fa fa-pencil-square-o"></i> <?php esc_html_e( 'All Posts', 'paper-press' ); ?></a>
+				<a href="<?php echo esc_url( get_author_posts_url( $author->ID ) ); ?>"><i class="fa fa-pencil-square-o"></i> <?php esc_html_e( 'All Posts', 'bulma-press' ); ?></a>
 
 				<?php if ( $author->user_url ) { ?>
-					<?php printf( '<a href="%1$s"><i class="fa fa-external-link"></i> %2$s</a>', esc_url( $author->user_url ), 'Website', 'paper-press' ); ?>
+					<?php printf( '<a href="%1$s"><i class="fa fa-external-link"></i> %2$s</a>', esc_url( $author->user_url ), 'Website', 'bulma-press' ); ?>
 				<?php } ?>
 			</div>
 		</div><!-- .author-drawer-text -->
@@ -252,7 +252,7 @@ function paper_press_post_byline() { ?>
 	?>
 	<p class="entry-byline">
 		<!-- Create an avatar link -->
-		<a href="<?php echo esc_url( get_author_posts_url( $author_id ) ); ?>" title="<?php echo esc_attr( sprintf( __( 'Posts by %s', 'paper-press' ), get_the_author() ) ); ?>">
+		<a href="<?php echo esc_url( get_author_posts_url( $author_id ) ); ?>" title="<?php echo esc_attr( sprintf( __( 'Posts by %s', 'bulma-press' ), get_the_author() ) ); ?>">
 			<?php echo get_avatar( $author_id, apply_filters( 'paper_press_author_bio_avatar', 44 ) ); ?>
 		</a>
 
@@ -260,7 +260,7 @@ function paper_press_post_byline() { ?>
 		<a class="entry-byline-author" href="<?php echo esc_url( get_author_posts_url( $author_id ) ); ?>">
 			<?php echo esc_html( get_the_author_meta( 'display_name', $author_id ) ); ?>
 		</a>
-		<span class="entry-byline-on"><?php esc_html_e( 'on', 'paper-press' ); ?></span>
+		<span class="entry-byline-on"><?php esc_html_e( 'on', 'bulma-press' ); ?></span>
 		<span class="entry-byline-date"><?php echo get_the_date(); ?></span>
 	</p>
 <?php } endif;
