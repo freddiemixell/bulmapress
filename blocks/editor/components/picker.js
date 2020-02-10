@@ -1,5 +1,13 @@
 const { Component, Fragment } = wp.element;
 
+/**
+ * Picker
+ *
+ * @prop {func}  onChange Function to set attribute.
+ * @prop {array}  options Collection of option objects - [ { label: 'Huge', value: 'paperpress-font-1' } ]
+ * @prop {string} label   (optional) Label for the picker.
+ * @prop {string} id      Id attribute for the picker
+ */
 export default class Picker extends Component {
     constructor() {
         super(...arguments);
